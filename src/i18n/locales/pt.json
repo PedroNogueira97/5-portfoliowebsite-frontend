@@ -1,0 +1,154 @@
+{
+    "nav": {
+        "home": "Início",
+        "about": "Sobre",
+        "skills": "Habilidades",
+        "projects": "Projetos",
+        "experience": "Experiência",
+        "contact": "Contato",
+        "resume": "Currículo",
+        "downloadResume": "Baixar CV"
+    },
+    "hero": {
+        "greeting": "Olá, meu nome é",
+        "name": "Pedro Nogueira.",
+        "role": "Dev Backend Sênior & Engenheiro de IA",
+        "description": "Desenvolvedor Backend Sênior e Especialista em Engenharia de Agentes de IA com mais de 8 anos de experiência. Expertise sólida no ecossistema PHP (Symfony, Laravel, Zend) e Python (FastAPI), com foco em arquiteturas escaláveis e automação de alta performance.",
+        "viewWork": "Ver Meu Trabalho",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+    },
+    "about": {
+        "title": "Sobre Mim",
+        "description": "Desenvolvedor Backend Sênior e Especialista em Engenharia de Agentes de IA com mais de 8 anos de experiência. Atualmente lidera iniciativas \"AI First\", integrando LLMs, arquiteturas RAG e agentes autônomos para redesenhar fluxos de engenharia e operações.",
+        "education": "Formação",
+        "educationItems": {
+            "degree": "Bacharel em Ciência da Computação",
+            "university": "Unisagrado (2016 – 2019)",
+            "postgrad": "Pós-graduação em Análise de Dados",
+            "postgradUniversity": "Descomplica (Em andamento)",
+            "certAI": "Certificação Agent AI Engineering",
+            "certAIProvider": "Asimov Academy (2025)",
+            "certScrum": "Gestão Ágil de Projetos (Scrum)",
+            "certScrumProvider": "Certificação Profissional (2025)"
+        },
+        "languages": "Idiomas",
+        "languageItems": {
+            "english": "Inglês — Avançado (Fluência técnica e profissional)",
+            "spanish": "Espanhol — Intermediário",
+            "portuguese": "Português — Nativo"
+        }
+    },
+    "skills": {
+        "title": "Habilidades Técnicas",
+        "subtitle": "Minha expertise em diversas tecnologias e ferramentas",
+        "categories": {
+            "backend": "Backend & Linguagens",
+            "ai": "Inteligência Artificial",
+            "infra": "Infraestrutura & DevOps"
+        },
+        "coreCompetencies": "Competências Principais",
+        "competencyItems": [
+            "Clean Architecture",
+            "Domain-Driven Design (DDD)",
+            "APIs RESTful",
+            "Microsserviços",
+            "Engenharia de Agentes",
+            "Arquiteturas RAG",
+            "Prompt Engineering"
+        ]
+    },
+    "projects": {
+        "title": "Projetos em Destaque",
+        "subtitle": "Confira alguns dos meus trabalhos recentes",
+        "viewMore": "Ver Detalhes",
+        "viewAll": "Ver Todos os Projetos",
+        "items": {
+            "aiJail": {
+                "name": "AI-Jail",
+                "description": "Ambiente de desenvolvimento isolado e seguro para execução de agentes de IA utilizando Docker, WSL e SSH, com foco em governança e controle de contexto.",
+                "tech": [
+                    "Docker",
+                    "WSL",
+                    "SSH",
+                    "Linux",
+                    "AI Agents"
+                ]
+            },
+            "aiResume": {
+                "name": "AI Resume Agent",
+                "description": "Aplicação baseada em agentes de IA para geração dinâmica de currículos, utilizando Python, FastAPI, RAG e integração com LLMs.",
+                "tech": [
+                    "Python",
+                    "FastAPI",
+                    "RAG",
+                    "LLMs",
+                    "ChromaDB"
+                ]
+            },
+            "lnmWebsite": {
+                "name": "LNM Website",
+                "description": "Implementação de pipeline completo de CI/CD com deploy automatizado em VPS via Nginx e GitHub Actions.",
+                "tech": [
+                    "Nginx",
+                    "GitHub Actions",
+                    "CI/CD",
+                    "VPS",
+                    "Docker"
+                ]
+            }
+        }
+    },
+    "experience": {
+        "title": "Experiência",
+        "subtitle": "Minha jornada profissional",
+        "viewMore": "Ver Detalhes",
+        "items": {
+            "lnm": {
+                "role": "Gerente Operacional",
+                "company": "LNM Engenharia",
+                "period": "Nov/2025 – Atual",
+                "description": "Liderança de times multidisciplinares (TI, Operações, Comercial) aplicando metodologias ágeis (Scrum). Estruturação de processos técnicos baseados em KPIs e automação de fluxos operacionais."
+            },
+            "arca": {
+                "role": "Desenvolvedor Backend",
+                "company": "Arca Solutions",
+                "period": "Nov/2020 – Ago/2025",
+                "description": "Desenvolvimento e manutenção de APIs RESTful complexas utilizando PHP Symfony e Laravel para clientes internacionais. Troubleshooting avançado em produção, resolvendo mais de 500 incidentes críticos (taxa de sucesso de 99.5%). Otimização de performance em MySQL e Elasticsearch, gerando ganhos de até 40%."
+            },
+            "experience": {
+                "role": "Desenvolvedor Fullstack",
+                "company": "Experience Soluções",
+                "period": "Maio/2020 – Jul/2020",
+                "description": "Desenvolvimento de aplicações web com Node.js, React e TypeScript e integração de APIs de telecomunicações."
+            },
+            "twoRS": {
+                "role": "Desenvolvedor Fullstack Júnior",
+                "company": "2RS Soluções Web/TI",
+                "period": "Dez/2018 – Maio/2020",
+                "description": "Desenvolvimento de e-commerces robustos utilizando PHP e Zend Framework. Integração de gateways de pagamento (PayPal, Yelp) e manutenção de sistemas em produção."
+            }
+        }
+    },
+    "contact": {
+        "title": "Entre em Contato",
+        "subtitle": "Estou aberto a novas oportunidades. Se você tem alguma pergunta ou apenas quer dizer oi, fique à vontade para entrar em contato!",
+        "name": "Nome",
+        "email": "E-mail",
+        "message": "Mensagem",
+        "send": "Enviar Mensagem",
+        "namePlaceholder": "Seu nome",
+        "emailPlaceholder": "seu@email.com",
+        "messagePlaceholder": "Sua mensagem..."
+    },
+    "resume": {
+        "title": "Currículo",
+        "description": "Baixe meu currículo para saber mais sobre minha experiência e habilidades.",
+        "download": "Baixar Currículo (PDF)"
+    },
+    "footer": {
+        "builtWith": "Construído com",
+        "using": "usando React & TailwindCSS",
+        "rights": "Todos os direitos reservados."
+    }
+}

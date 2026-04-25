@@ -1,0 +1,154 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "projects": "Projects",
+        "experience": "Experience",
+        "contact": "Contact",
+        "resume": "Resume",
+        "downloadResume": "Download CV"
+    },
+    "hero": {
+        "greeting": "Hi, my name is",
+        "name": "Pedro Nogueira.",
+        "role": "Senior Backend Developer & AI Engineer",
+        "description": "Senior Backend Developer and AI Agent Engineering Specialist with 8+ years of experience. Solid expertise in the PHP ecosystem (Symfony, Laravel, Zend) and Python (FastAPI), focused on scalable architectures and high-performance automation.",
+        "viewWork": "View My Work",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+    },
+    "about": {
+        "title": "About Me",
+        "description": "Senior Backend Developer and AI Agent Engineering Specialist with 8+ years of experience. Currently leading 'AI First' initiatives, integrating LLMs, RAG architectures, and autonomous agents to redesign engineering and operations workflows.",
+        "education": "Education",
+        "educationItems": {
+            "degree": "Bachelor in Computer Science",
+            "university": "Unisagrado (2016 – 2019)",
+            "postgrad": "Data Analytics Postgraduate",
+            "postgradUniversity": "Descomplica (In Progress)",
+            "certAI": "Agent AI Engineering Certification",
+            "certAIProvider": "Asimov Academy (2025)",
+            "certScrum": "Agile Project Management (Scrum)",
+            "certScrumProvider": "Professional Certification (2025)"
+        },
+        "languages": "Languages",
+        "languageItems": {
+            "english": "English — Advanced (Technical & Professional fluency)",
+            "spanish": "Spanish — Intermediate",
+            "portuguese": "Portuguese — Native"
+        }
+    },
+    "skills": {
+        "title": "Technical Skills",
+        "subtitle": "My expertise across various technologies and tools",
+        "categories": {
+            "backend": "Backend & Languages",
+            "ai": "Artificial Intelligence",
+            "infra": "Infrastructure & DevOps"
+        },
+        "coreCompetencies": "Core Competencies",
+        "competencyItems": [
+            "Clean Architecture",
+            "Domain-Driven Design (DDD)",
+            "RESTful APIs",
+            "Microservices",
+            "Agent Engineering",
+            "RAG Architectures",
+            "Prompt Engineering"
+        ]
+    },
+    "projects": {
+        "title": "Featured Projects",
+        "subtitle": "Check out some of my recent work",
+        "viewMore": "View Details",
+        "viewAll": "View All Projects",
+        "items": {
+            "aiJail": {
+                "name": "AI-Jail",
+                "description": "Isolated and secure development environment for AI agent execution using Docker, WSL, and SSH, focused on governance and context control.",
+                "tech": [
+                    "Docker",
+                    "WSL",
+                    "SSH",
+                    "Linux",
+                    "AI Agents"
+                ]
+            },
+            "aiResume": {
+                "name": "AI Resume Agent",
+                "description": "AI agent-based application for dynamic resume generation using Python, FastAPI, RAG, and LLM integration.",
+                "tech": [
+                    "Python",
+                    "FastAPI",
+                    "RAG",
+                    "LLMs",
+                    "ChromaDB"
+                ]
+            },
+            "lnmWebsite": {
+                "name": "LNM Website",
+                "description": "Full CI/CD pipeline implementation with automated deployment to VPS via Nginx and GitHub Actions.",
+                "tech": [
+                    "Nginx",
+                    "GitHub Actions",
+                    "CI/CD",
+                    "VPS",
+                    "Docker"
+                ]
+            }
+        }
+    },
+    "experience": {
+        "title": "Experience",
+        "subtitle": "My professional journey",
+        "viewMore": "View Details",
+        "items": {
+            "lnm": {
+                "role": "Operations Manager",
+                "company": "LNM Engenharia",
+                "period": "Nov/2025 – Present",
+                "description": "Leading multidisciplinary teams (IT, Operations, Commercial) applying agile methodologies (Scrum). Structuring technical processes based on KPIs and automating operational workflows."
+            },
+            "arca": {
+                "role": "Backend Developer",
+                "company": "Arca Solutions",
+                "period": "Nov/2020 – Aug/2025",
+                "description": "Development and maintenance of complex RESTful APIs using PHP Symfony and Laravel for international clients. Advanced production troubleshooting, resolving 500+ critical incidents (99.5% success rate). MySQL and Elasticsearch performance optimization, achieving up to 40% speed gains."
+            },
+            "experience": {
+                "role": "Fullstack Developer",
+                "company": "Experience Soluções",
+                "period": "May/2020 – Jul/2020",
+                "description": "Web application development with Node.js, React and TypeScript, and telecom API integration."
+            },
+            "twoRS": {
+                "role": "Junior Fullstack Developer",
+                "company": "2RS Soluções Web/TI",
+                "period": "Dec/2018 – May/2020",
+                "description": "E-commerce development using PHP and Zend Framework. Payment gateway integration (PayPal, Yelp) and production system maintenance."
+            }
+        }
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "subtitle": "I'm currently open to new opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send Message",
+        "namePlaceholder": "Your name",
+        "emailPlaceholder": "your@email.com",
+        "messagePlaceholder": "Your message..."
+    },
+    "resume": {
+        "title": "Resume",
+        "description": "Download my resume to learn more about my experience and skills.",
+        "download": "Download Resume (PDF)"
+    },
+    "footer": {
+        "builtWith": "Built with",
+        "using": "using React & TailwindCSS",
+        "rights": "All rights reserved."
+    }
+}
