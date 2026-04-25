@@ -10,7 +10,7 @@ export default function About() {
     const spokenLanguages = t('about.languageItems', { returnObjects: true }) as any[];
 
     return (
-        <section id="about" className="py-10">
+        <section id="about" className="pt-4 pb-10">
             <div className="container">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -75,8 +75,21 @@ export default function About() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.4 }}
+                        className="space-y-8"
                     >
-                        <div className="p-8 rounded-[var(--radius-lg)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)] sticky top-24">
+                        {/* Profile Photo - Re-inserted here */}
+                        <div className="relative group w-full aspect-square">
+                            <div className="absolute inset-0 border-2 border-[var(--color-accent)] rounded-[var(--radius-md)] translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300" />
+                            <div className="relative overflow-hidden rounded-[var(--radius-md)] bg-[var(--color-accent)] w-full h-full border border-[var(--color-accent)] shadow-xl">
+                                <img
+                                    src="/assets/images/profile.jpeg"
+                                    alt="Pedro Nogueira"
+                                    className="w-full h-full object-cover mix-blend-multiply filter grayscale hover:grayscale-0 transition-all duration-300"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="p-8 rounded-[var(--radius-lg)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)]">
                             <h3 className="text-lg font-bold mb-8 flex items-center gap-2 text-[var(--color-text-primary)]">
                                 <Languages className="accent-text" size={20} />
                                 {t('about.languages')}

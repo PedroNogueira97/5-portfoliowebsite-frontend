@@ -38,7 +38,7 @@ export default function Hero() {
     };
 
     return (
-        <section id="hero" className="min-h-[90vh] flex flex-col justify-center pt-24 pb-12 overflow-hidden relative">
+        <section id="hero" className="min-h-[85vh] flex flex-col justify-center pt-20 pb-0 overflow-hidden relative">
             {/* Background Glow */}
             <div className="absolute top-1/4 -right-20 w-96 h-96 bg-[var(--color-accent)] opacity-5 blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute bottom-1/4 -left-20 w-64 h-64 bg-blue-500 opacity-5 blur-[100px] rounded-full pointer-events-none" />
@@ -49,84 +49,66 @@ export default function Hero() {
                 animate="visible"
                 className="container"
             >
-                <div className="grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-24 items-center">
-                    <div className="order-2 lg:order-1">
-                        <motion.p variants={itemVariants} className="mono accent-text mb-4 text-base sm:text-lg">
-                            {t('hero.greeting')}
-                        </motion.p>
+                <div className="max-w-4xl">
+                    <motion.p variants={itemVariants} className="mono accent-text mb-4 text-base sm:text-lg">
+                        {t('hero.greeting')}
+                    </motion.p>
 
-                        <motion.h1
-                            variants={itemVariants}
-                            className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-4 text-[var(--color-text-primary)]"
-                        >
-                            {t('hero.name')}
-                        </motion.h1>
+                    <motion.h1
+                        variants={itemVariants}
+                        className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-4 text-[var(--color-text-primary)]"
+                    >
+                        {t('hero.name')}
+                    </motion.h1>
 
-                        {/* Title Wrapper with fixed height and centering */}
-                        <motion.div variants={itemVariants} className="relative h-[1.2em] mb-8 sm:mb-10 text-3xl sm:text-5xl lg:text-6xl font-bold">
-                            {roles.map((role, idx) => (
-                                <motion.h2
-                                    key={role}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{
-                                        opacity: idx === roleIndex ? 1 : 0,
-                                        y: idx === roleIndex ? 0 : (idx < roleIndex ? -20 : 20),
-                                        visibility: idx === roleIndex ? 'visible' : 'hidden'
-                                    }}
-                                    transition={{ duration: 0.5, ease: "easeOut" }}
-                                    className="absolute inset-0 text-[var(--color-text-secondary)] whitespace-nowrap"
-                                >
-                                    {role}
-                                </motion.h2>
-                            ))}
-                        </motion.div>
-
-                        <motion.div
-                            variants={itemVariants}
-                            className="max-w-xl text-[var(--color-text-secondary)] text-lg mb-10 space-y-4"
-                        >
-                            <p className="font-medium text-[var(--color-text-primary)]">{t('hero.role')}</p>
-                            <p className="text-base leading-relaxed opacity-80">{t('hero.description')}</p>
-                        </motion.div>
-
-                        <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-12">
-                            <a
-                                href="#projects"
-                                className="px-8 py-4 bg-transparent border border-[var(--color-accent)] text-[var(--color-accent)] rounded-[var(--radius-sm)] hover:bg-[var(--color-accent-muted)] transition-all duration-300 mono flex items-center gap-2 group"
+                    {/* Title Wrapper with fixed height and centering */}
+                    <motion.div variants={itemVariants} className="relative h-[1.2em] mb-8 sm:mb-10 text-3xl sm:text-5xl lg:text-6xl font-bold">
+                        {roles.map((role, idx) => (
+                            <motion.h2
+                                key={role}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{
+                                    opacity: idx === roleIndex ? 1 : 0,
+                                    y: idx === roleIndex ? 0 : (idx < roleIndex ? -20 : 20),
+                                    visibility: idx === roleIndex ? 'visible' : 'hidden'
+                                }}
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                                className="absolute inset-0 text-[var(--color-text-secondary)] whitespace-nowrap"
                             >
-                                {t('hero.viewProjects')}
-                                <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                            </a>
-                            <a
-                                href="#contact"
-                                className="px-8 py-4 bg-[var(--color-accent)] text-[var(--color-bg-primary)] font-bold rounded-[var(--radius-sm)] hover:bg-[var(--color-accent-hover)] transition-all duration-300 flex items-center gap-2 relative z-10"
-                            >
-                                {t('hero.cta')}
-                            </a>
-                        </motion.div>
-
-                        <motion.div variants={itemVariants} className="flex gap-6">
-                            <SocialLink href="https://github.com/PedroNogueira97" icon={<Code size={24} />} label="GitHub" />
-                            <SocialLink href="https://linkedin.com/in/pedronogueiraneto" icon={<Cpu size={24} />} label="LinkedIn" />
-                            <SocialLink href="mailto:pedronogueiraneto@gmail.com" icon={<Mail size={24} />} label="Email" />
-                            <SocialLink href="https://twitter.com/pedronogueira" icon={<Globe size={24} />} label="Twitter" />
-                        </motion.div>
-                    </div>
+                                {role}
+                            </motion.h2>
+                        ))}
+                    </motion.div>
 
                     <motion.div
                         variants={itemVariants}
-                        className="order-1 lg:order-2 flex justify-center lg:justify-end"
+                        className="max-w-xl text-[var(--color-text-secondary)] text-lg mb-10 space-y-4"
                     >
-                        <div className="relative group">
-                            <div className="absolute inset-0 border-2 border-[var(--color-accent)] rounded-[var(--radius-md)] translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300 pointer-events-none" />
-                            <div className="relative overflow-hidden rounded-[var(--radius-md)] bg-[var(--color-accent)] w-64 h-64 sm:w-80 sm:h-80 border border-[var(--color-accent)]">
-                                <img
-                                    src="/assets/images/profile.jpeg"
-                                    alt="Pedro Nogueira"
-                                    className="w-full h-full object-cover mix-blend-multiply filter grayscale hover:grayscale-0 transition-all duration-300"
-                                />
-                            </div>
-                        </div>
+                        <p className="font-medium text-[var(--color-text-primary)]">{t('hero.role')}</p>
+                        <p className="text-base leading-relaxed opacity-80">{t('hero.description')}</p>
+                    </motion.div>
+
+                    <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-12">
+                        <a
+                            href="#projects"
+                            className="px-8 py-4 bg-transparent border border-[var(--color-accent)] text-[var(--color-accent)] rounded-[var(--radius-sm)] hover:bg-[var(--color-accent-muted)] transition-all duration-300 mono flex items-center gap-2 group"
+                        >
+                            {t('hero.viewProjects')}
+                            <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                        </a>
+                        <a
+                            href="#contact"
+                            className="px-8 py-4 bg-[var(--color-accent)] text-[var(--color-bg-primary)] font-bold rounded-[var(--radius-sm)] hover:bg-[var(--color-accent-hover)] transition-all duration-300 flex items-center gap-2 relative z-10"
+                        >
+                            {t('hero.cta')}
+                        </a>
+                    </motion.div>
+
+                    <motion.div variants={itemVariants} className="flex gap-6">
+                        <SocialLink href="https://github.com/PedroNogueira97" icon={<Code size={24} />} label="GitHub" />
+                        <SocialLink href="https://linkedin.com/in/pedronogueiraneto" icon={<Cpu size={24} />} label="LinkedIn" />
+                        <SocialLink href="mailto:pedronogueiraneto@gmail.com" icon={<Mail size={24} />} label="Email" />
+                        <SocialLink href="https://twitter.com/pedronogueira" icon={<Globe size={24} />} label="Twitter" />
                     </motion.div>
                 </div>
             </motion.div>
