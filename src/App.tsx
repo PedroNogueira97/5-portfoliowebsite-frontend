@@ -5,10 +5,15 @@ import ProjectDetail from '@/pages/ProjectDetail';
 import ExperienceDetail from '@/pages/ExperienceDetail';
 import useScrollToTop from '@/hooks/useScrollToTop';
 
-function App() {
+function ScrollToTop() {
   useScrollToTop();
+  return null;
+}
+
+function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
