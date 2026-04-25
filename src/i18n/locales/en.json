@@ -182,6 +182,15 @@
                     "Web application development with Node.js, React and TypeScript.",
                     "Telecom API integration and real-time processing systems."
                 ]
+            },
+            {
+                "role": "Junior Fullstack Developer",
+                "company": "2RS Soluções Web/TI",
+                "period": "Dec 2018 – May 2020",
+                "description": [
+                    "Developed robust e-commerce platforms using PHP and Zend Framework.",
+                    "Integrated payment gateways (PayPal, Yelp) and maintained production systems."
+                ]
             }
         ]
     },

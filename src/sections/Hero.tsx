@@ -56,7 +56,7 @@ export default function Hero() {
                     {t('hero.name')}
                 </motion.h1>
 
-                <motion.div variants={itemVariants} className="h-[1.5em] mb-6 overflow-hidden">
+                <motion.div variants={itemVariants} className="h-[2em] mb-6 overflow-hidden flex items-center">
                     <motion.h2
                         key={roleIndex}
                         initial={{ y: 50, opacity: 0 }}
@@ -87,7 +87,7 @@ export default function Hero() {
                     </a>
                     <a
                         href="#contact"
-                        className="px-8 py-4 bg-[var(--color-accent)] text-[var(--color-bg-primary)] font-bold rounded-[var(--radius-sm)] hover:bg-[var(--color-accent-hover)] transition-all duration-300 flex items-center gap-2"
+                        className="px-8 py-4 bg-[var(--color-accent)] text-[var(--color-bg-primary)] font-bold rounded-[var(--radius-sm)] hover:bg-[var(--color-accent-hover)] transition-all duration-300 flex items-center gap-2 relative z-10"
                     >
                         {t('hero.cta')}
                     </a>

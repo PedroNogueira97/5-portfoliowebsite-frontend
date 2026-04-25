@@ -10,7 +10,7 @@ export default function About() {
     const spokenLanguages = t('about.languageItems', { returnObjects: true }) as any[];
 
     return (
-        <section id="about" className="py-24">
+        <section id="about" className="py-16">
             <div className="container">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}

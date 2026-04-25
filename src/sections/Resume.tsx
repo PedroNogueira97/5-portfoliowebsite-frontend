@@ -6,7 +6,7 @@ export default function Resume() {
     const { t } = useTranslation();
 
     return (
-        <section id="resume" className="bg-[var(--color-bg-secondary)] py-24">
+        <section id="resume" className="bg-[var(--color-bg-secondary)] py-16">
             <div className="container text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

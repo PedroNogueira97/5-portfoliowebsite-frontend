@@ -25,7 +25,7 @@ export default function Projects() {
     };
 
     return (
-        <section id="projects">
+        <section id="projects" className="py-24 bg-[var(--color-bg-secondary)]">
             <div className="container">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export default function Projects() {
                             <motion.div
                                 key={key}
                                 variants={itemVariants}
-                                className="group relative p-8 rounded-[var(--radius-lg)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent-border)] hover:-translate-y-2 transition-all duration-300 flex flex-col h-full"
+                                className="group relative p-10 rounded-[var(--radius-lg)] bg-[var(--color-bg-primary)] border border-[var(--color-border)] hover:border-[var(--color-accent-border)] hover:-translate-y-2 transition-all duration-300 flex flex-col h-full"
                             >
                                 <div className="flex justify-between items-center mb-8">
                                     <div className="accent-text">

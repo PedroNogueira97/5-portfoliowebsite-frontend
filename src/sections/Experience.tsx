@@ -9,7 +9,7 @@ export default function Experience() {
     const experiences = t('experience.items', { returnObjects: true }) as any[];
 
     return (
-        <section id="experience" className="bg-[var(--color-bg-secondary)] py-24">
+        <section id="experience" className="bg-[var(--color-bg-secondary)] py-16">
             <div className="container">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}

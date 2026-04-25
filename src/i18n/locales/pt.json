@@ -182,6 +182,15 @@
                     "Desenvolvimento de aplicações web com Node.js, React e TypeScript.",
                     "Integração de APIs de telecomunicações e sistemas de processamento em tempo real."
                 ]
+            },
+            {
+                "role": "Desenvolvedor Fullstack Júnior",
+                "company": "2RS Soluções Web/TI",
+                "period": "Dez 2018 – Mai 2020",
+                "description": [
+                    "Desenvolvimento de e-commerces robustos utilizando PHP e Zend Framework.",
+                    "Integração de gateways de pagamento (PayPal, Yelp) e manutenção de sistemas em produção."
+                ]
             }
         ]
     },
