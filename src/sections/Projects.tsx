@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import { ExternalLink, Folder, Code } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const projectKeys = ['aiJail', 'aiResume', 'lnmWebsite'] as const;
 
@@ -69,7 +70,9 @@ export default function Projects() {
                                 </div>
 
                                 <h3 className="text-xl font-bold mb-3 text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300">
-                                    {t(`projects.items.${key}.name`)}
+                                    <Link to={`/project/${key}`}>
+                                        {t(`projects.items.${key}.name`)}
+                                    </Link>
                                 </h3>
 
                                 <p className="text-[var(--color-text-secondary)] text-sm mb-6 leading-relaxed grow">
