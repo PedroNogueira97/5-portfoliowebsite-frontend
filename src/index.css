@@ -2,129 +2,170 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colors - Dark terminal-inspired palette */
-  --color-bg-primary: #0a0a0f;
-  --color-bg-secondary: #111118;
-  --color-bg-tertiary: #1a1a24;
-  --color-bg-card: #16161e;
-  --color-bg-card-hover: #1e1e2a;
+  /* Colors - Deep oceanic/ebony palette */
+  --color-bg-primary: #0a192f;
+  /* Dark navy (Aditi inspired) */
+  --color-bg-secondary: #112240;
+  /* Lighter navy */
+  --color-bg-tertiary: #233554;
+  /* Even lighter navy */
+  --color-bg-card: #112240;
+  --color-bg-card-hover: #1d2d50;
 
-  --color-accent: #00ff88;
-  --color-accent-hover: #00cc6a;
-  --color-accent-muted: rgba(0, 255, 136, 0.1);
-  --color-accent-border: rgba(0, 255, 136, 0.2);
+  --color-accent: #64ffda;
+  /* Aquamarine (Aditi/Achyut inspired) */
+  --color-accent-hover: #52d1b2;
+  --color-accent-muted: rgba(100, 255, 218, 0.1);
+  --color-accent-border: rgba(100, 255, 218, 0.2);
 
-  --color-text-primary: #e4e4e7;
-  --color-text-secondary: #a1a1aa;
-  --color-text-muted: #71717a;
+  --color-text-primary: #ccd6f6;
+  /* Off-white blue */
+  --color-text-secondary: #8892b0;
+  /* Muted blue */
+  --color-text-muted: #495670;
+  /* Darker muted blue */
 
-  --color-border: #27272a;
-  --color-border-light: #3f3f46;
+  --color-border: #233554;
+  --color-border-light: #303c55;
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   /* Spacing */
-  --section-padding: clamp(4rem, 8vw, 8rem);
+  --section-padding: clamp(6rem, 12vw, 10rem);
+  /* Increased for premium feel */
 
   /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-slow: 400ms ease;
+  --transition-fast: 150ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition-base: 250ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition-slow: 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
   /* Border Radius */
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
 }
 
 /* Base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    background-color: var(--color-bg-primary);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Typography refinements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--color-text-primary);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-primary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-text-muted);
+    border: 3px solid var(--color-bg-primary);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-secondary);
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-accent);
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
+/* Utility layers */
+@layer utilities {
+  .container {
+    max-width: 1000px;
+    /* More centered focus (standard in portfolios) */
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+  }
 
-body {
-  font-family: var(--font-sans);
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  .section-title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    font-size: clamp(26px, 5vw, 32px);
+    white-space: nowrap;
+    margin-bottom: 40px;
+  }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 8px;
-}
+  .section-title::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -5px;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: var(--color-border);
+  }
 
-::-webkit-scrollbar-track {
-  background: var(--color-bg-primary);
-}
+  .accent-text {
+    color: var(--color-accent);
+  }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-border-light);
-  border-radius: 4px;
-}
+  .mono {
+    font-family: var(--font-mono);
+  }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent);
-}
-
-/* Selection styling */
-::selection {
-  background: var(--color-accent-muted);
-  color: var(--color-accent);
-}
-
-/* Section defaults */
-section {
-  padding: var(--section-padding) 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 clamp(1rem, 4vw, 3rem);
-}
-
-/* Utility classes */
-.section-title {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 700;
-  color: var(--color-text-primary);
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  font-size: clamp(0.875rem, 2vw, 1.125rem);
-  color: var(--color-text-secondary);
-  max-width: 600px;
-}
-
-.accent-text {
-  color: var(--color-accent);
-}
-
-.mono {
-  font-family: var(--font-mono);
+  /* Modern Glassmorphism utilities */
+  .glass {
+    background: rgba(17, 34, 64, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-accent-border);
+  }
 }
 
 /* Link defaults */
 a {
   color: var(--color-accent);
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-base);
+  display: inline-block;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: var(--color-accent-hover);
+  outline: none;
 }
