@@ -11,7 +11,7 @@ export default function Skills() {
             icon: <Database className="accent-text" />,
         },
         {
-            key: 'frontend',
+            key: 'ai',
             icon: <Code2 className="accent-text" />,
         },
         {
