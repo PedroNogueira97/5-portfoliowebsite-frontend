@@ -42,7 +42,7 @@ export default function Skills() {
     };
 
     return (
-        <section id="skills" className="bg-[var(--color-bg-secondary)] py-16">
+        <section id="skills" className="bg-[var(--color-bg-secondary)] py-10">
             <div className="container">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}

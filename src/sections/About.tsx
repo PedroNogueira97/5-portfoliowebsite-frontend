@@ -10,7 +10,7 @@ export default function About() {
     const spokenLanguages = t('about.languageItems', { returnObjects: true }) as any[];
 
     return (
-        <section id="about" className="py-16">
+        <section id="about" className="py-10">
             <div className="container">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -23,18 +23,18 @@ export default function About() {
                     {t('about.title')}
                 </motion.h2>
 
-                <div className="grid lg:grid-cols-[1fr_350px] gap-16">
+                <div className="grid lg:grid-cols-[1fr_300px] gap-12 lg:gap-20">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
-                        <div className="space-y-6 text-[var(--color-text-secondary)] leading-relaxed text-lg">
+                        <div className="space-y-6 text-[var(--color-text-secondary)] leading-relaxed text-lg mb-12">
                             <p>{t('about.description')}</p>
                         </div>
 
-                        <div className="mt-12 grid sm:grid-cols-2 gap-12">
+                        <div className="grid sm:grid-cols-2 gap-10">
                             <div>
                                 <h3 className="text-xl font-bold mb-6 flex items-center gap-2 text-[var(--color-text-primary)]">
                                     <GraduationCap className="accent-text" size={24} />
@@ -75,9 +75,8 @@ export default function About() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="space-y-12"
                     >
-                        <div className="p-8 rounded-[var(--radius-lg)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)]">
+                        <div className="p-8 rounded-[var(--radius-lg)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)] sticky top-24">
                             <h3 className="text-lg font-bold mb-8 flex items-center gap-2 text-[var(--color-text-primary)]">
                                 <Languages className="accent-text" size={20} />
                                 {t('about.languages')}
@@ -100,17 +99,6 @@ export default function About() {
                                         </div>
                                     </div>
                                 ))}
-                            </div>
-                        </div>
-
-                        <div className="relative group max-w-[280px] mx-auto lg:mx-0">
-                            <div className="absolute inset-0 border-2 border-[var(--color-accent)] rounded-[var(--radius-md)] translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300" />
-                            <div className="relative overflow-hidden rounded-[var(--radius-md)] bg-[var(--color-accent)] aspect-square border border-[var(--color-accent)]">
-                                <img
-                                    src="/assets/images/profile.jpeg"
-                                    alt="Pedro Nogueira"
-                                    className="w-full h-full object-cover mix-blend-multiply filter grayscale hover:grayscale-0 transition-all duration-300"
-                                />
                             </div>
                         </div>
                     </motion.aside>
