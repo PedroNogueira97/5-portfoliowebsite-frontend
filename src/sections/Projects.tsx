@@ -1,48 +1,95 @@
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
+import { ExternalLink, Folder, Code } from 'lucide-react';
 
 const projectKeys = ['aiJail', 'aiResume', 'lnmWebsite'] as const;
 
 export default function Projects() {
     const { t } = useTranslation();
 
+    const containerVariants: Variants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    };
+
+    const itemVariants: Variants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.645, 0.045, 0.355, 1] } }
+    };
+
     return (
         <section id="projects">
             <div className="container">
-                <h2 className="section-title">
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="section-title"
+                >
                     <span className="mono accent-text text-xl mr-2">03.</span>
                     {t('projects.title')}
-                </h2>
+                </motion.h2>
+
                 <p className="section-subtitle mb-12">{t('projects.subtitle')}</p>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
                     {projectKeys.map((key) => {
                         const tech = t(`projects.items.${key}.tech`, { returnObjects: true }) as string[];
                         return (
-                            <div
+                            <motion.div
                                 key={key}
-                                className="group p-6 rounded-[var(--radius-xl)] bg-[var(--color-bg-card)] border border-[var(--color-border)] hover:border-[var(--color-accent-border)] hover:bg-[var(--color-bg-card-hover)] transition-all duration-300 hover:-translate-y-1"
+                                variants={itemVariants}
+                                className="group relative p-8 rounded-[var(--radius-lg)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:border-[var(--color-accent-border)] hover:-translate-y-2 transition-all duration-300 flex flex-col h-full"
                             >
-                                <div className="text-[var(--color-accent)] text-3xl mb-4 mono">&lt;/&gt;</div>
-                                <h3 className="text-xl font-semibold mb-3 text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-200">
+                                <div className="flex justify-between items-center mb-8">
+                                    <div className="accent-text">
+                                        <Folder size={40} />
+                                    </div>
+                                    <div className="flex gap-4 text-[var(--color-text-secondary)]">
+                                        <a href="#" className="hover:text-[var(--color-accent)] transition-colors">
+                                            <Code size={20} />
+                                        </a>
+                                        <a href="#" className="hover:text-[var(--color-accent)] transition-colors">
+                                            <ExternalLink size={20} />
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <h3 className="text-xl font-bold mb-3 text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors duration-300">
                                     {t(`projects.items.${key}.name`)}
                                 </h3>
-                                <p className="text-[var(--color-text-secondary)] text-sm mb-4 leading-relaxed">
+
+                                <p className="text-[var(--color-text-secondary)] text-sm mb-6 leading-relaxed grow">
                                     {t(`projects.items.${key}.description`)}
                                 </p>
-                                <div className="flex flex-wrap gap-2 mt-auto">
+
+                                <ul className="flex flex-wrap gap-x-4 gap-y-2 mt-auto">
                                     {tech.map((item) => (
-                                        <span
+                                        <li
                                             key={item}
-                                            className="px-2 py-1 text-xs mono text-[var(--color-text-muted)] bg-[var(--color-bg-tertiary)] rounded-[var(--radius-sm)]"
+                                            className="text-xs mono text-[var(--color-text-muted)] group-hover:text-[var(--color-text-secondary)] transition-colors"
                                         >
                                             {item}
-                                        </span>
+                                        </li>
                                     ))}
-                                </div>
-                            </div>
+                                </ul>
+                            </motion.div>
                         );
                     })}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
