@@ -3,8 +3,10 @@ import Layout from '@/components/Layout';
 import Home from '@/pages/Home';
 import ProjectDetail from '@/pages/ProjectDetail';
 import ExperienceDetail from '@/pages/ExperienceDetail';
+import useScrollToTop from '@/hooks/useScrollToTop';
 
 function App() {
+  useScrollToTop();
   return (
     <Router>
       <Layout>
