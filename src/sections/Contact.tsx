@@ -119,7 +119,7 @@ export default function Contact() {
     );
 }
 
-function ContactInfoItem({ icon, label, value, href }: { icon: ReactNode; label: string; value: string; href?: string }) {
+function ContactInfoItem({ icon, label, value, href }: { icon: React.ReactNode; label: string; value: string; href?: string }) {
     const content = (
         <div className="flex items-start gap-4 group">
             <div className="p-3 rounded-[var(--radius-sm)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)] group-hover:border-[var(--color-accent-border)] transition-colors">
