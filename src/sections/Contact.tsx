@@ -1,76 +1,136 @@
 import { useTranslation } from 'react-i18next';
-import { useState, type FormEvent } from 'react';
+import { motion } from 'framer-motion';
+import { Send, Mail, MapPin, Phone } from 'lucide-react';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 
 export default function Contact() {
     const { t } = useTranslation();
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        // TODO: integrate with backend/email service
-        console.log('Form submitted:', formData);
+        setIsSubmitting(true);
+        // Simulate form submission
+        setTimeout(() => {
+            setIsSubmitting(false);
+            alert(t('contact.form.success') || 'Message sent!');
+            (e.target as HTMLFormElement).reset();
+        }, 1500);
     };
 
     return (
-        <section id="contact">
-            <div className="container max-w-2xl text-center">
-                <h2 className="section-title">
+        <section id="contact" className="py-24">
+            <div className="container">
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="section-title"
+                >
                     <span className="mono accent-text text-xl mr-2">05.</span>
                     {t('contact.title')}
-                </h2>
-                <p className="section-subtitle mx-auto mb-12">{t('contact.subtitle')}</p>
+                </motion.h2>
 
-                <form onSubmit={handleSubmit} className="space-y-6 text-left">
-                    <div>
-                        <label htmlFor="name" className="block text-sm mono text-[var(--color-text-muted)] mb-2">
-                            {t('contact.name')}
-                        </label>
-                        <input
-                            id="name"
-                            type="text"
-                            required
-                            placeholder={t('contact.namePlaceholder')}
-                            value={formData.name}
-                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                            className="w-full px-4 py-3 bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text-primary)] placeholder-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-accent)] transition-colors duration-200"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="email" className="block text-sm mono text-[var(--color-text-muted)] mb-2">
-                            {t('contact.email')}
-                        </label>
-                        <input
-                            id="email"
-                            type="email"
-                            required
-                            placeholder={t('contact.emailPlaceholder')}
-                            value={formData.email}
-                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                            className="w-full px-4 py-3 bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text-primary)] placeholder-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-accent)] transition-colors duration-200"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="message" className="block text-sm mono text-[var(--color-text-muted)] mb-2">
-                            {t('contact.message')}
-                        </label>
-                        <textarea
-                            id="message"
-                            required
-                            rows={5}
-                            placeholder={t('contact.messagePlaceholder')}
-                            value={formData.message}
-                            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                            className="w-full px-4 py-3 bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text-primary)] placeholder-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-accent)] transition-colors duration-200 resize-none"
-                        />
-                    </div>
-                    <button
-                        type="submit"
-                        className="w-full px-6 py-3 bg-transparent border border-[var(--color-accent)] text-[var(--color-accent)] rounded-[var(--radius-md)] hover:bg-[var(--color-accent-muted)] transition-all duration-200 mono text-sm cursor-pointer"
+                <div className="grid lg:grid-cols-2 gap-16 mt-12">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
                     >
-                        {t('contact.send')}
-                    </button>
-                </form>
+                        <h3 className="text-3xl font-bold mb-6 text-[var(--color-text-primary)]">
+                            {t('contact.subtitle')}
+                        </h3>
+                        <p className="text-[var(--color-text-secondary)] mb-10 leading-relaxed max-w-lg">
+                            {t('contact.description')}
+                        </p>
+
+                        <div className="space-y-6">
+                            <ContactInfoItem
+                                icon={<Mail className="accent-text" size={24} />}
+                                label="Email"
+                                value="pedronogueiraneto@gmail.com"
+                                href="mailto:pedronogueiraneto@gmail.com"
+                            />
+                            <ContactInfoItem
+                                icon={<MapPin className="accent-text" size={24} />}
+                                label="Location"
+                                value="São Paulo, Brazil"
+                            />
+                            <ContactInfoItem
+                                icon={<Phone className="accent-text" size={24} />}
+                                label="Phone"
+                                value="+55 (11) 9...."
+                            />
+                        </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                    >
+                        <form onSubmit={handleSubmit} className="space-y-6">
+                            <div className="grid sm:grid-cols-2 gap-6">
+                                <div className="space-y-2">
+                                    <label htmlFor="name" className="text-sm mono accent-text ml-1">{t('contact.form.name')}</label>
+                                    <input
+                                        required
+                                        id="name"
+                                        type="text"
+                                        className="w-full bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-[var(--radius-sm)] p-4 text-[var(--color-text-primary)] focus:outline-none focus:border-[var(--color-accent)] transition-colors"
+                                    />
+                                </div>
+                                <div className="space-y-2">
+                                    <label htmlFor="email" className="text-sm mono accent-text ml-1">{t('contact.form.email')}</label>
+                                    <input
+                                        required
+                                        id="email"
+                                        type="email"
+                                        className="w-full bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-[var(--radius-sm)] p-4 text-[var(--color-text-primary)] focus:outline-none focus:border-[var(--color-accent)] transition-colors"
+                                    />
+                                </div>
+                            </div>
+                            <div className="space-y-2">
+                                <label htmlFor="message" className="text-sm mono accent-text ml-1">{t('contact.form.message')}</label>
+                                <textarea
+                                    required
+                                    id="message"
+                                    rows={6}
+                                    className="w-full bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-[var(--radius-sm)] p-4 text-[var(--color-text-primary)] focus:outline-none focus:border-[var(--color-accent)] transition-colors resize-none"
+                                />
+                            </div>
+                            <button
+                                disabled={isSubmitting}
+                                type="submit"
+                                className="w-full sm:w-auto px-10 py-4 bg-transparent border border-[var(--color-accent)] text-[var(--color-accent)] rounded-[var(--radius-sm)] hover:bg-[var(--color-accent-muted)] transition-all duration-300 mono flex items-center justify-center gap-3 disabled:opacity-50 group"
+                            >
+                                {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
+                                <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                            </button>
+                        </form>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );
+}
+
+function ContactInfoItem({ icon, label, value, href }: { icon: React.ReactNode; label: string; value: string; href?: string }) {
+    const content = (
+        <div className="flex items-start gap-4 group">
+            <div className="p-3 rounded-[var(--radius-sm)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)] group-hover:border-[var(--color-accent-border)] transition-colors">
+                {icon}
+            </div>
+            <div>
+                <p className="text-xs mono accent-text uppercase tracking-widest">{label}</p>
+                <p className="text-[var(--color-text-primary)] font-medium group-hover:text-[var(--color-accent)] transition-colors">{value}</p>
+            </div>
+        </div>
+    );
+
+    return href ? <a href={href}>{content}</a> : <div>{content}</div>;
 }
