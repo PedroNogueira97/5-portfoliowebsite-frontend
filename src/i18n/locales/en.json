@@ -7,62 +7,114 @@
         "experience": "Experience",
         "contact": "Contact",
         "resume": "Resume",
-        "downloadResume": "Download CV"
+        "backToHome": "Back to Home"
     },
     "hero": {
         "greeting": "Hi, my name is",
         "name": "Pedro Nogueira.",
         "role": "Senior Backend Developer & AI Engineer",
         "description": "Senior Backend Developer and AI Agent Engineering Specialist with 8+ years of experience. Solid expertise in the PHP ecosystem (Symfony, Laravel, Zend) and Python (FastAPI), focused on scalable architectures and high-performance automation.",
-        "viewWork": "View My Work",
-        "linkedin": "LinkedIn",
-        "github": "GitHub"
+        "viewProjects": "View Projects",
+        "cta": "Get In Touch"
     },
     "about": {
         "title": "About Me",
         "description": "Senior Backend Developer and AI Agent Engineering Specialist with 8+ years of experience. Currently leading 'AI First' initiatives, integrating LLMs, RAG architectures, and autonomous agents to redesign engineering and operations workflows.",
         "education": "Education",
-        "educationItems": {
-            "degree": "Bachelor in Computer Science",
-            "university": "Unisagrado (2016 – 2019)",
-            "postgrad": "Data Analytics Postgraduate",
-            "postgradUniversity": "Descomplica (In Progress)",
-            "certAI": "Agent AI Engineering Certification",
-            "certAIProvider": "Asimov Academy (2025)",
-            "certScrum": "Agile Project Management (Scrum)",
-            "certScrumProvider": "Professional Certification (2025)"
-        },
+        "educationItems": [
+            {
+                "degree": "Bachelor in Computer Science",
+                "university": "Unisagrado (2016 – 2019)"
+            },
+            {
+                "degree": "Data Analytics Postgraduate",
+                "university": "Descomplica (In Progress)"
+            }
+        ],
+        "certifications": [
+            {
+                "name": "Agent AI Engineering",
+                "provider": "Asimov Academy"
+            },
+            {
+                "name": "Agile (Scrum)",
+                "provider": "Professional Cert"
+            }
+        ],
         "languages": "Languages",
-        "languageItems": {
-            "english": "English — Advanced (Technical & Professional fluency)",
-            "spanish": "Spanish — Intermediate",
-            "portuguese": "Portuguese — Native"
-        }
+        "languageItems": [
+            {
+                "name": "Portuguese",
+                "level": "Native",
+                "progress": 100
+            },
+            {
+                "name": "English",
+                "level": "Advanced",
+                "progress": 90
+            },
+            {
+                "name": "Spanish",
+                "level": "Intermediate",
+                "progress": 60
+            }
+        ]
     },
     "skills": {
         "title": "Technical Skills",
-        "subtitle": "My expertise across various technologies and tools",
-        "categories": {
-            "backend": "Backend & Languages",
-            "ai": "Artificial Intelligence",
-            "infra": "Infrastructure & DevOps"
+        "groups": {
+            "backend": {
+                "title": "Backend & Languages",
+                "items": [
+                    "PHP (Symfony, Laravel)",
+                    "Python (FastAPI)",
+                    "Node.js (TypeScript)",
+                    "Domain-Driven Design"
+                ]
+            },
+            "ai": {
+                "title": "Artificial Intelligence",
+                "items": [
+                    "AI Agents",
+                    "RAG Arch",
+                    "Prompt Engineering",
+                    "LLM Integration"
+                ]
+            },
+            "devops": {
+                "title": "Infrastructure & Cloud",
+                "items": [
+                    "Docker",
+                    "VPS",
+                    "GitHub Actions",
+                    "Nginx",
+                    "Linux (WSL/SSH)"
+                ]
+            },
+            "testing": {
+                "title": "Agile & Quality",
+                "items": [
+                    "Scrum",
+                    "TDD / Unit Testing",
+                    "KPI Management",
+                    "Technical Leadership"
+                ]
+            }
         },
-        "coreCompetencies": "Core Competencies",
-        "competencyItems": [
-            "Clean Architecture",
-            "Domain-Driven Design (DDD)",
-            "RESTful APIs",
-            "Microservices",
-            "Agent Engineering",
-            "RAG Architectures",
-            "Prompt Engineering"
-        ]
+        "core": {
+            "title": "Core Competencies",
+            "items": [
+                "Clean Architecture",
+                "RESTful APIs",
+                "Microservices",
+                "Scalable Systems",
+                "Workflow Automation"
+            ]
+        }
     },
     "projects": {
         "title": "Featured Projects",
         "subtitle": "Check out some of my recent work",
-        "viewMore": "View Details",
-        "viewAll": "View All Projects",
         "items": {
             "aiJail": {
                 "name": "AI-Jail",
@@ -100,55 +152,59 @@
         }
     },
     "experience": {
-        "title": "Experience",
+        "title": "Work Experience",
         "subtitle": "My professional journey",
-        "viewMore": "View Details",
-        "items": {
-            "lnm": {
+        "items": [
+            {
                 "role": "Operations Manager",
                 "company": "LNM Engenharia",
-                "period": "Nov/2025 – Present",
-                "description": "Leading multidisciplinary teams (IT, Operations, Commercial) applying agile methodologies (Scrum). Structuring technical processes based on KPIs and automating operational workflows."
+                "period": "Nov 2025 – Present",
+                "description": [
+                    "Leading multidisciplinary teams (IT, Operations, Commercial) applying agile methodologies (Scrum).",
+                    "Structuring technical processes based on KPIs and automating operational workflows."
+                ]
             },
-            "arca": {
+            {
                 "role": "Backend Developer",
                 "company": "Arca Solutions",
-                "period": "Nov/2020 – Aug/2025",
-                "description": "Development and maintenance of complex RESTful APIs using PHP Symfony and Laravel for international clients. Advanced production troubleshooting, resolving 500+ critical incidents (99.5% success rate). MySQL and Elasticsearch performance optimization, achieving up to 40% speed gains."
+                "period": "Nov 2020 – Aug 2025",
+                "description": [
+                    "Development and maintenance of complex RESTful APIs using PHP Symfony and Laravel for international clients.",
+                    "Advanced production troubleshooting, resolving 500+ critical incidents with 99.5% success rate.",
+                    "MySQL and Elasticsearch performance optimization, achieving up to 40% speed gains."
+                ]
             },
-            "experience": {
+            {
                 "role": "Fullstack Developer",
                 "company": "Experience Soluções",
-                "period": "May/2020 – Jul/2020",
-                "description": "Web application development with Node.js, React and TypeScript, and telecom API integration."
-            },
-            "twoRS": {
-                "role": "Junior Fullstack Developer",
-                "company": "2RS Soluções Web/TI",
-                "period": "Dec/2018 – May/2020",
-                "description": "E-commerce development using PHP and Zend Framework. Payment gateway integration (PayPal, Yelp) and production system maintenance."
+                "period": "May 2020 – Jul 2020",
+                "description": [
+                    "Web application development with Node.js, React and TypeScript.",
+                    "Telecom API integration and real-time processing systems."
+                ]
             }
-        }
+        ]
     },
     "contact": {
         "title": "Get In Touch",
-        "subtitle": "I'm currently open to new opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
-        "name": "Name",
-        "email": "Email",
-        "message": "Message",
-        "send": "Send Message",
-        "namePlaceholder": "Your name",
-        "emailPlaceholder": "your@email.com",
-        "messagePlaceholder": "Your message..."
+        "subtitle": "Currently open to new opportunities.",
+        "description": "If you have a project in mind or just want to say hi, my inbox is always open. I'll get back to you as soon as I can!",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Send Message",
+            "sending": "Sending...",
+            "success": "Message sent successfully!"
+        }
     },
     "resume": {
-        "title": "Resume",
-        "description": "Download my resume to learn more about my experience and skills.",
-        "download": "Download Resume (PDF)"
+        "title": "Looking for my CV?",
+        "subtitle": "You can download a PDF version of my resume or view it directly in your browser. It includes my full work history and detailed technical stack.",
+        "button": "Download Resume"
     },
     "footer": {
         "builtWith": "Built with",
-        "using": "using React & TailwindCSS",
-        "rights": "All rights reserved."
+        "using": "using React & Tailwind"
     }
 }
