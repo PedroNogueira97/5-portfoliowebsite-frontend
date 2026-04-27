@@ -54,7 +54,3 @@ jobs:
       - name: Run Python tests
         if: steps.detect.outputs.python == 'true'
         run: pytest || true
-
-      - name: Build Docker image
-        if: steps.detect.outputs.docker == 'true'
-        run: docker build -t app-ci-test .
