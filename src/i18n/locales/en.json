@@ -184,7 +184,14 @@
                     "RAG",
                     "LLMs",
                     "ChromaDB"
-                ]
+                ],
+                "keyFeatures": [
+                    "Dynamic resume generation using AI agents",
+                    "RAG for personalized content",
+                    "LLM integration for natural language processing",
+                    "ChromaDB for vector storage and retrieval"
+                ],
+                "sourceCode": "https://github.com/PedroNogueira97/cv_agent"
             },
             "lnmWebsite": {
                 "name": "LNM Website",
@@ -196,7 +203,12 @@
                     "CI/CD",
                     "VPS",
                     "Docker"
-                ]
+                ],
+                "keyFeatures": [
+                    "Website for LNM Engenharia",
+                    "Full CI/CD pipeline implementation with automated deployment to VPS via Nginx and GitHub Actions"
+                ],
+                "sourceCode": "https://lnmengenharia.com"
             }
         }
     },

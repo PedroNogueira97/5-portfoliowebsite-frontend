@@ -189,7 +189,12 @@
                     "RAG",
                     "LLMs",
                     "ChromaDB"
-                ]
+                ],
+                "keyFeatures": [
+                    "Aplicação baseada em agentes de IA para geração dinâmica de currículos",
+                    "Geração de currículos dinâmicos usando Python, FastAPI e RAG"
+                ],
+                "sourceCode": "https://github.com/PedroNogueira97/cv_agent"
             },
             "lnmWebsite": {
                 "name": "Website LNM",
@@ -201,7 +206,12 @@
                     "CI/CD",
                     "VPS",
                     "Docker"
-                ]
+                ],
+                "keyFeatures": [
+                    "Website para a LNM Engenharia",
+                    "Implementação completa de pipeline CI/CD com deploy automatizado para VPS via Nginx e GitHub Actions"
+                ],
+                "sourceCode": "https://lnmengenharia.com"
             }
         }
     },
