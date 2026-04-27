@@ -28,7 +28,7 @@ export default function Resume() {
                     </p>
 
                     <a
-                        href="/assets/doc/resume.pdf"
+                        href="/doc/resume.pdf"
                         download
                         className="inline-flex items-center justify-center px-10 py-5 bg-[#64ffda] text-[#0a192f] font-bold rounded-[var(--radius-sm)] hover:bg-[#52d1b2] transition-all duration-300 shadow-lg active:scale-95 font-mono"
                         style={{ color: '#0a192f' }}

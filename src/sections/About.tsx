@@ -93,7 +93,7 @@ export default function About() {
                             <div className="absolute inset-0 border-2 border-[var(--color-accent)] rounded-[var(--radius-md)] translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300" />
                             <div className="relative overflow-hidden rounded-[var(--radius-md)] w-full h-full border border-[var(--color-accent)] shadow-xl">
                                 <img
-                                    src="/assets/images/profile.jpeg"
+                                    src="/images/profile.jpeg"
                                     alt="Pedro Nogueira"
                                     className="w-full h-full object-cover transition-all duration-300"
                                 />
