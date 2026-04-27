@@ -105,9 +105,11 @@ export default function Hero() {
                         </a>
                         <a
                             href="#contact"
-                            className="px-8 py-4 bg-[var(--color-accent)] text-[var(--color-bg-primary)] font-bold rounded-[var(--radius-sm)] hover:bg-[var(--color-accent-hover)] transition-all duration-300 flex items-center gap-2"
+                            className="px-8 py-4 bg-[var(--color-accent)] rounded-[var(--radius-sm)] hover:bg-[var(--color-accent-hover)] transition-all duration-300 flex items-center gap-2 group border border-[var(--color-accent)]"
                         >
-                            {t('hero.cta')}
+                            <span className="text-[#0a192f] font-bold">
+                                {t('hero.cta')}
+                            </span>
                         </a>
                     </motion.div>
 
