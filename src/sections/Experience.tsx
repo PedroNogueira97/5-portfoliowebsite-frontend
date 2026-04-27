@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Briefcase } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 export default function Experience() {
     const { t } = useTranslation();
