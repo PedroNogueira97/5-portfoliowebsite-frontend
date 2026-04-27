@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { FileDown, Terminal } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 
 export default function Resume() {
     const { t } = useTranslation();
@@ -30,10 +30,10 @@ export default function Resume() {
                     <a
                         href="/assets/docs/resume.pdf"
                         download
-                        className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--color-accent)] text-[var(--color-bg-primary)] font-bold rounded-[var(--radius-sm)] hover:bg-[var(--color-accent-hover)] transition-all duration-300 shadow-lg shadow-[var(--color-accent-muted)] active:scale-95"
+                        className="inline-flex items-center justify-center px-10 py-5 bg-[#64ffda] text-[#0a192f] font-bold rounded-[var(--radius-sm)] hover:bg-[#52d1b2] transition-all duration-300 shadow-lg active:scale-95 font-mono"
+                        style={{ color: '#0a192f' }}
                     >
-                        <FileDown size={20} />
-                        {t('resume.button')}
+                        {t('resume.button') || 'Download Resume'}
                     </a>
 
                     <div className="mt-12 flex justify-center gap-8 text-[var(--color-text-muted)] mono text-xs uppercase tracking-widest">

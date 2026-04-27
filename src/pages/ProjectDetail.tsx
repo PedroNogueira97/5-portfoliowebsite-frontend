@@ -93,24 +93,26 @@ export default function ProjectDetail() {
                         </div>
 
                         <aside className="space-y-8">
-                            <div className="p-8 rounded-[var(--radius-lg)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)] shadow-sm">
-                                <h3 className="text-xl font-bold mb-6 text-[var(--color-text-primary)]">Technical Stack</h3>
-                                <div className="space-y-4">
-                                    {tech.map((item: string) => (
-                                        <div key={item} className="flex items-center justify-between py-2 border-b border-[var(--color-border)] last:border-0">
-                                            <span className="text-sm text-[var(--color-text-secondary)]">{item}</span>
-                                            <span className="w-2 h-2 rounded-full bg-[var(--color-accent)] opacity-40"></span>
-                                        </div>
-                                    ))}
+                            {slug !== 'aiJail' && (
+                                <div className="p-8 rounded-[var(--radius-lg)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)] shadow-sm">
+                                    <h3 className="text-xl font-bold mb-6 text-[var(--color-text-primary)]">Technical Stack</h3>
+                                    <div className="space-y-4">
+                                        {tech.map((item: string) => (
+                                            <div key={item} className="flex items-center justify-between py-2 border-b border-[var(--color-border)] last:border-0">
+                                                <span className="text-sm text-[var(--color-text-secondary)]">{item}</span>
+                                                <span className="w-2 h-2 rounded-full bg-[var(--color-accent)] opacity-40"></span>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
+                            )}
 
-                            <div className="p-8 rounded-[var(--radius-lg)] bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-hover)] text-white shadow-lg">
+                            <div className="p-8 rounded-[var(--radius-lg)] bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-hover)] text-[var(--color-bg-primary)] shadow-lg">
                                 <h3 className="text-xl font-bold mb-4">Interested in this?</h3>
-                                <p className="text-sm opacity-90 mb-6 leading-relaxed">
+                                <p className="text-sm font-medium mb-6 leading-relaxed opacity-90">
                                     I'm available for collaborations or discussing the technical details of this implementation.
                                 </p>
-                                <Link to="#contact" className="inline-block w-full text-center py-3 bg-white text-[var(--color-accent)] rounded-[var(--radius-md)] font-bold hover:bg-opacity-90 transition-all">
+                                <Link to="#contact" className="inline-block w-full text-center py-3 bg-[var(--color-bg-primary)] text-[var(--color-accent)] rounded-[var(--radius-md)] font-bold hover:bg-opacity-90 transition-all">
                                     Contact Me
                                 </Link>
                             </div>
