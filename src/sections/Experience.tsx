@@ -44,9 +44,7 @@ export default function Experience() {
                                 <div className="p-6 rounded-[var(--radius-lg)] bg-[var(--color-bg-primary)] border border-[var(--color-border)] hover:border-[var(--color-accent-border)] transition-all duration-300 group">
                                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                                         <h3 className="text-xl font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-accent)] transition-colors">
-                                            <Link to={`/experience/${item.company.toLowerCase().replace(/\s+/g, '-')}`}>
-                                                {item.role}
-                                            </Link>
+                                            {item.role}
                                         </h3>
                                         <span className="mono text-xs accent-text px-3 py-1 bg-[var(--color-accent-muted)] rounded-full">
                                             {item.period}
