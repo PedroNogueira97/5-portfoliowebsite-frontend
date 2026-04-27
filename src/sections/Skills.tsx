@@ -7,12 +7,20 @@ export default function Skills() {
 
     const skillGroups = [
         {
+            key: 'ai',
+            icon: <Code2 className="accent-text" />,
+        },
+        {
+            key: 'testing',
+            icon: <Settings className="accent-text" />,
+        },
+        {
             key: 'backend',
             icon: <Database className="accent-text" />,
         },
         {
-            key: 'ai',
-            icon: <Code2 className="accent-text" />,
+            key: 'data',
+            icon: <Database className="accent-text" />,
         },
         {
             key: 'ide',
@@ -21,14 +29,6 @@ export default function Skills() {
         {
             key: 'devops',
             icon: <Terminal className="accent-text" />,
-        },
-        {
-            key: 'data',
-            icon: <Database className="accent-text" />,
-        },
-        {
-            key: 'testing',
-            icon: <Settings className="accent-text" />,
         }
     ];
 
@@ -68,7 +68,7 @@ export default function Skills() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
+                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
                 >
                     {skillGroups.map((group) => {
                         const items = t(`skills.groups.${group.key}.items`, { returnObjects: true }) as string[];

@@ -135,11 +135,6 @@
                     "Elasticsearch",
                     "Supabase",
                     "Firebase",
-                    "Google Cloud Storage",
-                    "AWS S3",
-                    "AWS RDS",
-                    "AWS DynamoDB",
-                    "AWS ElastiCache",
                     "Vector Database: ChromaDB"
                 ]
             }
