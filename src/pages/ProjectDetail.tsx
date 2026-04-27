@@ -98,7 +98,7 @@ export default function ProjectDetail() {
                                 <p className="text-sm font-semibold mb-6 leading-relaxed">
                                     I'm available for collaborations or discussing the technical details of this implementation.
                                 </p>
-                                <Link to="#contact" className="inline-block w-full text-center py-3 bg-[var(--color-bg-primary)] text-[var(--color-accent)] rounded-[var(--radius-md)] font-bold hover:bg-opacity-90 transition-all">
+                                <Link to="/#contact" className="inline-block w-full text-center py-3 bg-[var(--color-bg-primary)] text-[var(--color-accent)] rounded-[var(--radius-md)] font-bold hover:bg-opacity-90 transition-all">
                                     Contact Me
                                 </Link>
                             </div>

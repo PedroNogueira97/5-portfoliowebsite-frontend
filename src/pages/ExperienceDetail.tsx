@@ -84,15 +84,15 @@ export default function ExperienceDetail() {
                                 </div>
                             </div>
 
-                            <div className="relative p-6 rounded-[var(--radius-lg)] border border-[var(--color-accent)] border-opacity-30 bg-[var(--color-accent-muted)] overflow-hidden">
+                            <div className="relative p-8 rounded-[var(--radius-lg)] bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-hover)] text-[var(--color-bg-primary)] shadow-lg overflow-hidden">
                                 <div className="relative z-10">
-                                    <h4 className="text-[var(--color-text-primary)] font-bold mb-2">Looking for details?</h4>
-                                    <p className="text-xs text-[var(--color-text-secondary)] mb-4">
+                                    <h4 className="text-[var(--color-bg-primary)] font-bold mb-4">Looking for details?</h4>
+                                    <p className="text-sm font-semibold mb-6 leading-relaxed">
                                         For a deeper dive into specific projects handled during this period, feel free to reach out.
                                     </p>
-                                    <button className="w-full py-2 bg-[var(--color-accent)] text-white rounded-[var(--radius-sm)] text-sm font-bold hover:bg-[var(--color-accent-hover)] transition-all">
+                                    <Link to="/#contact" className="inline-block w-full text-center py-3 bg-[var(--color-bg-primary)] text-[var(--color-accent)] rounded-[var(--radius-md)] font-bold hover:bg-opacity-90 transition-all">
                                         Email Me
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                         </aside>
