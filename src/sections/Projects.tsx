@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
-import { ExternalLink, Folder, Code } from 'lucide-react';
+import { ExternalLink, Folder } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const projectKeys = ['aiJail', 'aiResume', 'lnmWebsite'] as const;
