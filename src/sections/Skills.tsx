@@ -15,8 +15,16 @@ export default function Skills() {
             icon: <Code2 className="accent-text" />,
         },
         {
+            key: 'ide',
+            icon: <Database className="accent-text" />, // Using Database as placeholder for IDEs if needed, or find a better one
+        },
+        {
             key: 'devops',
             icon: <Terminal className="accent-text" />,
+        },
+        {
+            key: 'data',
+            icon: <Database className="accent-text" />,
         },
         {
             key: 'testing',
@@ -76,16 +84,17 @@ export default function Skills() {
                                         {t(`skills.groups.${group.key}.title`)}
                                     </h3>
                                 </div>
-                                <div className="flex flex-wrap gap-2">
+                                <ul className="space-y-3">
                                     {items.map((skill) => (
-                                        <span
+                                        <li
                                             key={skill}
-                                            className="px-3 py-1 text-xs mono text-[var(--color-text-secondary)] bg-[var(--color-bg-tertiary)] rounded-full hover:text-[var(--color-accent)] hover:bg-[var(--color-accent-muted)] transition-colors duration-200"
+                                            className="flex items-center gap-2 text-sm mono text-[var(--color-text-secondary)] group-hover:text-[var(--color-text-primary)] transition-colors duration-200"
                                         >
+                                            <span className="accent-text text-lg">▹</span>
                                             {skill}
-                                        </span>
+                                        </li>
                                     ))}
-                                </div>
+                                </ul>
                             </motion.div>
                         );
                     })}

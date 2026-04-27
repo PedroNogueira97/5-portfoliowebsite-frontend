@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Send, Mail, MapPin, Phone } from 'lucide-react';
+import { Send, Mail, MapPin } from 'lucide-react';
 import { useState } from 'react';
 import type { FormEvent, ReactNode } from 'react';
 
@@ -8,15 +8,53 @@ export default function Contact() {
     const { t } = useTranslation();
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e: FormEvent) => {
+    const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
+        const formData = new FormData(e.target as HTMLFormElement);
+        const email = formData.get('email') as string;
+
+        // Basic email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
         setIsSubmitting(true);
-        // Simulate form submission
-        setTimeout(() => {
+
+        try {
+            // Integration with Resend (assuming a proxy or serverless function if needed)
+            // For now, we'll use a direct fetch to show the implementation
+            // Note: In production, this should go through a backend to keep the API key safe
+            const response = await fetch('https://api.resend.com/emails', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${import.meta.env.VITE_RESEND_API_KEY || 're_bRr65VhZ_tNKrpmjUrdiJ63HzARMoLm6T'}`,
+                },
+                body: JSON.stringify({
+                    from: 'Portfolio Contact <onboarding@resend.dev>',
+                    to: 'pedronogueiraneto@gmail.com',
+                    subject: `New Message from ${formData.get('name')}`,
+                    html: `<p><strong>Name:</strong> ${formData.get('name')}</p>
+                           <p><strong>Email:</strong> ${formData.get('email')}</p>
+                           <p><strong>Message:</strong></p>
+                           <p>${formData.get('message')}</p>`,
+                }),
+            });
+
+            if (response.ok) {
+                alert(t('contact.form.success') || 'Message sent!');
+                (e.target as HTMLFormElement).reset();
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+            alert('There was an error sending your message. Please try again later.');
+        } finally {
             setIsSubmitting(false);
-            alert(t('contact.form.success') || 'Message sent!');
-            (e.target as HTMLFormElement).reset();
-        }, 1500);
+        }
     };
 
     return (
@@ -57,12 +95,7 @@ export default function Contact() {
                             <ContactInfoItem
                                 icon={<MapPin className="accent-text" size={24} />}
                                 label="Location"
-                                value="São Paulo, Brazil"
-                            />
-                            <ContactInfoItem
-                                icon={<Phone className="accent-text" size={24} />}
-                                label="Phone"
-                                value="+55 (11) 9...."
+                                value="Bauru, SP, Brasil"
                             />
                         </div>
                     </motion.div>
@@ -80,6 +113,7 @@ export default function Contact() {
                                     <input
                                         required
                                         id="name"
+                                        name="name"
                                         type="text"
                                         className="w-full bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-[var(--radius-sm)] p-4 text-[var(--color-text-primary)] focus:outline-none focus:border-[var(--color-accent)] transition-colors"
                                     />
@@ -89,6 +123,7 @@ export default function Contact() {
                                     <input
                                         required
                                         id="email"
+                                        name="email"
                                         type="email"
                                         className="w-full bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-[var(--radius-sm)] p-4 text-[var(--color-text-primary)] focus:outline-none focus:border-[var(--color-accent)] transition-colors"
                                     />
@@ -99,6 +134,7 @@ export default function Contact() {
                                 <textarea
                                     required
                                     id="message"
+                                    name="message"
                                     rows={6}
                                     className="w-full bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-[var(--radius-sm)] p-4 text-[var(--color-text-primary)] focus:outline-none focus:border-[var(--color-accent)] transition-colors resize-none"
                                 />

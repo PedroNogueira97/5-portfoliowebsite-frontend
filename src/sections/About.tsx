@@ -60,7 +60,18 @@ export default function About() {
                                         <div key={index} className="flex items-start gap-3">
                                             <span className="accent-text mt-1">▹</span>
                                             <div>
-                                                <p className="text-[var(--color-text-primary)] font-medium text-sm leading-tight">{item.name}</p>
+                                                {item.link ? (
+                                                    <a
+                                                        href={item.link}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-[var(--color-text-primary)] font-medium text-sm leading-tight hover:text-[var(--color-accent)] transition-colors"
+                                                    >
+                                                        {item.name}
+                                                    </a>
+                                                ) : (
+                                                    <p className="text-[var(--color-text-primary)] font-medium text-sm leading-tight">{item.name}</p>
+                                                )}
                                                 <p className="text-xs text-[var(--color-text-muted)] mt-0.5">{item.provider}</p>
                                             </div>
                                         </div>
@@ -84,7 +95,7 @@ export default function About() {
                                 <img
                                     src="/assets/images/profile.jpeg"
                                     alt="Pedro Nogueira"
-                                    className="w-full h-full object-cover mix-blend-multiply filter grayscale hover:grayscale-0 transition-all duration-300"
+                                    className="w-full h-full object-cover mix-blend-multiply filter grayscale hover:grayscale-0 hover:mix-blend-normal transition-all duration-300 opacity-60 group-hover:opacity-100"
                                 />
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ExternalLink, Code } from 'lucide-react';
@@ -7,18 +7,24 @@ export default function ProjectDetail() {
     const { slug } = useParams();
     const { t } = useTranslation();
 
-    // Placeholder for project data fetching logic
-    // In a real scenario, this would load from a JSON or CMS based on :slug
+    const projectKeys = ['aiJail', 'aiResume', 'lnmWebsite'];
+
+    if (!slug || !projectKeys.includes(slug)) {
+        return <Navigate to="/" replace />;
+    }
+
+    const project = t(`projects.items.${slug}`, { returnObjects: true }) as any;
+    const tech = project.tech || [];
 
     return (
-        <div className="py-24">
+        <div className="py-24 bg-[var(--color-bg-primary)] min-h-screen">
             <div className="container">
                 <Link
                     to="/"
-                    className="inline-flex items-center gap-2 text-[var(--color-accent)] hover:underline mb-12 mono text-sm"
+                    className="inline-flex items-center gap-2 text-[var(--color-accent)] hover:underline mb-12 mono text-sm group"
                 >
-                    <ArrowLeft size={16} />
-                    {t('nav.backToHome') || 'Back to Home'}
+                    <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+                    {t('nav.backToHome')}
                 </Link>
 
                 <motion.div
@@ -26,59 +32,87 @@ export default function ProjectDetail() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <h1 className="text-4xl sm:text-6xl font-bold mb-6 text-[var(--color-text-primary)]">
-                        {slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-                    </h1>
-
-                    <div className="flex flex-wrap gap-3 mb-12">
-                        {['React', 'TypeScript', 'Node.js'].map(tech => (
-                            <span key={tech} className="px-3 py-1 bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-full text-xs mono text-[var(--color-accent)]">
-                                {tech}
-                            </span>
-                        ))}
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                        <div>
+                            <h1 className="text-4xl sm:text-6xl font-bold mb-6 text-[var(--color-text-primary)]">
+                                {project.name}
+                            </h1>
+                            <div className="flex flex-wrap gap-2">
+                                {tech.map((item: string) => (
+                                    <span key={item} className="px-3 py-1 bg-[var(--color-accent-muted)] border border-[var(--color-accent-border)] rounded-full text-xs mono accent-text">
+                                        {item}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="flex gap-4">
+                            {project.liveDemo && (
+                                <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-[var(--color-accent)] text-[var(--color-bg-primary)] rounded-[var(--radius-md)] font-bold hover:bg-[var(--color-accent-hover)] transition-all">
+                                    <ExternalLink size={18} />
+                                    Live Demo
+                                </a>
+                            )}
+                            <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 border border-[var(--color-accent)] text-[var(--color-accent)] rounded-[var(--radius-md)] font-bold hover:bg-[var(--color-accent-muted)] transition-all">
+                                <Code size={18} />
+                                Source Code
+                            </a>
+                        </div>
                     </div>
 
-                    <div className="grid lg:grid-cols-[1fr_400px] gap-16">
-                        <div className="space-y-8">
-                            <div className="aspect-video bg-[var(--color-bg-secondary)] rounded-[var(--radius-lg)] border border-[var(--color-border)] overflow-hidden">
-                                {/* Project Image Placeholder */}
-                                <div className="w-full h-full flex items-center justify-center text-[var(--color-text-muted)] italic">
-                                    Project Screenshot Placement
+                    <div className="grid lg:grid-cols-[1fr_350px] gap-16">
+                        <div className="space-y-12">
+                            <div className="aspect-video bg-[var(--color-bg-secondary)] rounded-[var(--radius-lg)] border border-[var(--color-border)] overflow-hidden shadow-xl">
+                                <div className="w-full h-full flex items-center justify-center text-[var(--color-text-muted)] italic bg-gradient-to-br from-[var(--color-bg-secondary)] to-[var(--color-bg-tertiary)]">
+                                    <div className="text-center p-8">
+                                        <Code size={48} className="mx-auto mb-4 opacity-20" />
+                                        <p>{project.name} Visual Showcase</p>
+                                    </div>
                                 </div>
                             </div>
 
                             <div className="prose prose-invert max-w-none text-[var(--color-text-secondary)]">
-                                <p className="text-lg leading-relaxed">
-                                    Detailed project description will go here. This page will showcase the challenges, solutions, and key features of the project: {slug}.
+                                <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-6">Overview</h2>
+                                <p className="text-lg leading-relaxed mb-8">
+                                    {project.description}
                                 </p>
+
+                                {project.keyFeatures && (
+                                    <>
+                                        <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-6">Key Features</h2>
+                                        <ul className="grid sm:grid-cols-2 gap-4 list-none p-0">
+                                            {(project.keyFeatures as string[]).map((f, i) => (
+                                                <li key={i} className="flex gap-3 p-4 bg-[var(--color-bg-secondary)] rounded-[var(--radius-md)] border border-[var(--color-border)]">
+                                                    <span className="accent-text mt-0.5">▹</span>
+                                                    <span className="text-sm font-medium">{f}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </>
+                                )}
                             </div>
                         </div>
 
                         <aside className="space-y-8">
-                            <div className="p-8 rounded-[var(--radius-lg)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)]">
-                                <h3 className="text-xl font-bold mb-6 text-[var(--color-text-primary)]">Project Links</h3>
+                            <div className="p-8 rounded-[var(--radius-lg)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)] shadow-sm">
+                                <h3 className="text-xl font-bold mb-6 text-[var(--color-text-primary)]">Technical Stack</h3>
                                 <div className="space-y-4">
-                                    <a href="#" className="flex items-center gap-3 p-4 bg-[var(--color-bg-primary)] border border-[var(--color-border)] rounded-[var(--radius-sm)] hover:border-[var(--color-accent-border)] transition-colors group">
-                                        <ExternalLink size={20} className="accent-text" />
-                                        <span className="font-medium group-hover:text-[var(--color-accent)] transition-colors">Live Demo</span>
-                                    </a>
-                                    <a href="#" className="flex items-center gap-3 p-4 bg-[var(--color-bg-primary)] border border-[var(--color-border)] rounded-[var(--radius-sm)] hover:border-[var(--color-accent-border)] transition-colors group">
-                                        <Code size={20} className="accent-text" />
-                                        <span className="font-medium group-hover:text-[var(--color-accent)] transition-colors">Source Code</span>
-                                    </a>
+                                    {tech.map((item: string) => (
+                                        <div key={item} className="flex items-center justify-between py-2 border-b border-[var(--color-border)] last:border-0">
+                                            <span className="text-sm text-[var(--color-text-secondary)]">{item}</span>
+                                            <span className="w-2 h-2 rounded-full bg-[var(--color-accent)] opacity-40"></span>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
 
-                            <div className="p-8 rounded-[var(--radius-lg)] bg-[var(--color-bg-secondary)] border border-[var(--color-border)]">
-                                <h3 className="text-xl font-bold mb-6 text-[var(--color-text-primary)]">Key Features</h3>
-                                <ul className="space-y-3">
-                                    {['Feature One', 'Feature Two', 'Feature Three'].map((f, i) => (
-                                        <li key={i} className="flex gap-3 text-sm text-[var(--color-text-secondary)]">
-                                            <span className="accent-text">▹</span>
-                                            {f}
-                                        </li>
-                                    ))}
-                                </ul>
+                            <div className="p-8 rounded-[var(--radius-lg)] bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-hover)] text-white shadow-lg">
+                                <h3 className="text-xl font-bold mb-4">Interested in this?</h3>
+                                <p className="text-sm opacity-90 mb-6 leading-relaxed">
+                                    I'm available for collaborations or discussing the technical details of this implementation.
+                                </p>
+                                <Link to="#contact" className="inline-block w-full text-center py-3 bg-white text-[var(--color-accent)] rounded-[var(--radius-md)] font-bold hover:bg-opacity-90 transition-all">
+                                    Contact Me
+                                </Link>
                             </div>
                         </aside>
                     </div>

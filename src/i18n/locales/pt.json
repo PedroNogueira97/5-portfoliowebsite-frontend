@@ -34,11 +34,13 @@
         "certifications": [
             {
                 "name": "Engenharia de Agentes de IA",
-                "provider": "Asimov Academy"
+                "provider": "Asimov Academy",
+                "link": "https://hub.asimov.academy/validar-certificado/e33981d2-ad1b-4d4c-b27f-0d1b1c3f6d63/"
             },
             {
-                "name": "Gestão Ágil (Scrum)",
-                "provider": "Professional Cert"
+                "name": "Agile Management with Scrum",
+                "provider": "Professional Cert",
+                "link": "https://www.udemy.com/certificate/UC-d45bc474-6e3d-4ae3-ae66-0233bf4352a7/"
             }
         ],
         "languages": "Idiomas",
@@ -69,7 +71,7 @@
                     "PHP (Symfony, Laravel)",
                     "Python (FastAPI)",
                     "Node.js (TypeScript)",
-                    "Domain-Driven Design"
+                    "Bash/Shell Script"
                 ]
             },
             "ai": {
@@ -78,7 +80,15 @@
                     "Agentes de IA",
                     "Arq. RAG",
                     "Eng. Prompt",
-                    "Integração LLM"
+                    "Integração LLM",
+                    "Claude Code",
+                    "Gemini CLI",
+                    "OpenAI API",
+                    "LangChain",
+                    "Hugging Face",
+                    "Pandas",
+                    "NumPy",
+                    "Matplotlib"
                 ]
             },
             "devops": {
@@ -88,7 +98,9 @@
                     "VPS",
                     "GitHub Actions",
                     "Nginx",
-                    "Linux (WSL/SSH)"
+                    "Linux (WSL/SSH)",
+                    "AWS",
+                    "Ansible"
                 ]
             },
             "testing": {
@@ -97,18 +109,50 @@
                     "Scrum",
                     "TDD / Testes Unit.",
                     "Gestão de KPIs",
-                    "Liderança Técnica"
+                    "Liderança Técnica",
+                    "Domain-Driven Design",
+                    "Arquitetura de Sistemas",
+                    "Design de Sistemas",
+                    "Engenheiro de Suporte Técnico"
+                ]
+            },
+            "ide": {
+                "title": "IDEs com IA",
+                "items": [
+                    "VS Code Copilot (Backend)",
+                    "Cursor AI (Backend)",
+                    "Google Antigravity (Frontend)"
+                ]
+            },
+            "data": {
+                "title": "Dados",
+                "items": [
+                    "PostgreSQL",
+                    "MySQL",
+                    "MongoDB",
+                    "Redis",
+                    "SQLite",
+                    "Elasticsearch",
+                    "Supabase",
+                    "Firebase",
+                    "Google Cloud Storage",
+                    "AWS S3",
+                    "AWS RDS",
+                    "AWS DynamoDB",
+                    "AWS ElastiCache",
+                    "Banco de Dados Vetorial: ChromaDB"
                 ]
             }
         },
         "core": {
             "title": "Competências Principais",
             "items": [
-                "Clean Architecture",
                 "APIs RESTful",
-                "Microsserviços",
-                "Sistemas Escaláveis",
-                "Automação de Fluxos"
+                "Automação de Fluxos",
+                "Clean Architecture",
+                "Engenharia de Agentes de IA",
+                "Metodologias Ágeis",
+                "Engenheiro de Suporte Técnico"
             ]
         }
     },
@@ -118,14 +162,23 @@
         "items": {
             "aiJail": {
                 "name": "AI-Jail",
-                "description": "Ambiente de desenvolvimento isolado e seguro para execução de agentes de IA usando Docker, WSL e SSH.",
+                "shortDescription": "Sandbox Docker segura para agentes de desenvolvimento de IA.",
+                "description": "Ambiente de desenvolvimento em Docker pensado para rodar o Openclaude (Ou qualquer IA de CLI), o basic-memory (conhecimento local / MCP) e o GitHub CLI (gh) para automatizar a criação de repositórios a partir de workspace/new-project.sh. Criando projetos com estrutura pronta para codar utilizando IA.",
                 "tech": [
                     "Docker",
                     "WSL",
                     "SSH",
                     "Linux",
-                    "IA Agents"
-                ]
+                    "AI Agents",
+                    "GitHub CLI"
+                ],
+                "keyFeatures": [
+                    "Configuração automatizada de ambiente de desenvolvimento orientado a IA",
+                    "Sandboxing de CLI de IA (\"AI Jail\") para restringir acesso a arquivos locais e dados sensíveis",
+                    "Fluxo de trabalho de desenvolvimento padronizado e governado",
+                    "Ambiente conteinerizado remoto rodando em uma máquina externa, acessado via SSH com segurança"
+                ],
+                "sourceCode": "https://github.com/PedroNogueira97/ai-jail"
             },
             "aiResume": {
                 "name": "AI Resume Agent",

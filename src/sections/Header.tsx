@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Download, Globe } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function Header() {
@@ -51,7 +51,7 @@ export default function Header() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
-                    href="#hero"
+                    href="/#hero"
                     className="text-2xl font-bold mono accent-text group select-none"
                 >
                     <span className="group-hover:text-[var(--color-text-primary)] transition-colors duration-300">&lt;</span>
@@ -67,7 +67,7 @@ export default function Header() {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3, delay: index * 0.1 }}
-                            href={`#${item}`}
+                            href={`/#${item}`}
                             className={cn(
                                 'text-sm transition-all duration-300 hover:text-[var(--color-accent)]',
                                 activeSection === item ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-secondary)]'
@@ -98,7 +98,6 @@ export default function Header() {
                             download
                             className="px-5 py-2.5 text-xs border border-[var(--color-accent)] text-[var(--color-accent)] rounded-[var(--radius-sm)] hover:bg-[var(--color-accent-muted)] transition-all duration-300 mono flex items-center gap-2"
                         >
-                            <Download size={14} />
                             {t('nav.resume')}
                         </a>
                     </motion.div>
@@ -131,7 +130,7 @@ export default function Header() {
                         {navItems.map((item, index) => (
                             <a
                                 key={item}
-                                href={`#${item}`}
+                                href={`/#${item}`}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-lg flex flex-col items-center gap-1"
                             >
