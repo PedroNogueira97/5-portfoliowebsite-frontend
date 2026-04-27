@@ -181,6 +181,7 @@
             },
             "aiResume": {
                 "name": "AI Resume Agent",
+                "shortDescription": "AI agent-based application for dynamic resume generation.",
                 "description": "AI agent-based application for dynamic resume generation using Python, FastAPI, RAG, and LLM integration.",
                 "tech": [
                     "Python",
@@ -192,6 +193,7 @@
             },
             "lnmWebsite": {
                 "name": "LNM Website",
+                "shortDescription": "Website for LNM Engenharia with full CI/CD pipeline implementation.",
                 "description": "Full CI/CD pipeline implementation with automated deployment to VPS via Nginx and GitHub Actions.",
                 "tech": [
                     "Nginx",

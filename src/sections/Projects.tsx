@@ -76,7 +76,7 @@ export default function Projects() {
                                 </h3>
 
                                 <p className="text-[var(--color-text-secondary)] text-sm mb-6 leading-relaxed grow">
-                                    {t(`projects.items.${key}.description`)}
+                                    {t(`projects.items.${key}.shortDescription`)}
                                 </p>
 
                                 <ul className="flex flex-wrap gap-x-4 gap-y-2 mt-auto">
