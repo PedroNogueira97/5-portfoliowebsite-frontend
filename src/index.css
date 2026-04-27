@@ -169,3 +169,9 @@ a:focus {
   color: var(--color-accent-hover);
   outline: none;
 }
+
+@media (min-width: 768px) and (max-width: 890px) {
+  .gap-md-fix {
+    gap: calc(var(--spacing) * 2);
+  }
+}

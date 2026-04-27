@@ -60,12 +60,9 @@ export default function Projects() {
                                         <Folder size={40} />
                                     </div>
                                     <div className="flex gap-4 text-[var(--color-text-secondary)]">
-                                        <a href="#" className="hover:text-[var(--color-accent)] transition-colors">
-                                            <Code size={20} />
-                                        </a>
-                                        <a href="#" className="hover:text-[var(--color-accent)] transition-colors">
+                                        <Link to={`/project/${key}`} className="hover:text-[var(--color-accent)] transition-colors">
                                             <ExternalLink size={20} />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
 

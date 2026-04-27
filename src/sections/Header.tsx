@@ -60,7 +60,7 @@ export default function Header() {
                 </motion.a>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-8">
+                <nav className="hidden md:flex items-center gap-8 gap-md-fix">
                     {navItems.map((item, index) => (
                         <motion.a
                             key={item}
