@@ -91,11 +91,11 @@ export default function About() {
                         {/* Profile Photo - Re-inserted here */}
                         <div className="relative group w-full aspect-square">
                             <div className="absolute inset-0 border-2 border-[var(--color-accent)] rounded-[var(--radius-md)] translate-x-3 translate-y-3 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-300" />
-                            <div className="relative overflow-hidden rounded-[var(--radius-md)] bg-[var(--color-accent)] w-full h-full border border-[var(--color-accent)] shadow-xl">
+                            <div className="relative overflow-hidden rounded-[var(--radius-md)] w-full h-full border border-[var(--color-accent)] shadow-xl">
                                 <img
                                     src="/assets/images/profile.jpeg"
                                     alt="Pedro Nogueira"
-                                    className="w-full h-full object-cover mix-blend-multiply filter grayscale hover:grayscale-0 hover:mix-blend-normal transition-all duration-300 opacity-60 group-hover:opacity-100"
+                                    className="w-full h-full object-cover transition-all duration-300"
                                 />
                             </div>
                         </div>
