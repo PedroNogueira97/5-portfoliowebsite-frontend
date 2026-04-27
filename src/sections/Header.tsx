@@ -94,7 +94,7 @@ export default function Header() {
                         </button>
 
                         <a
-                            href="/assets/docs/resume.pdf"
+                            href="/assets/doc/resume.pdf"
                             download
                             className="px-5 py-2.5 text-xs border border-[var(--color-accent)] text-[var(--color-accent)] rounded-[var(--radius-sm)] hover:bg-[var(--color-accent-muted)] transition-all duration-300 mono flex items-center gap-2"
                         >
@@ -139,7 +139,7 @@ export default function Header() {
                             </a>
                         ))}
                         <a
-                            href="/assets/docs/resume.pdf"
+                            href="/assets/doc/resume.pdf"
                             download
                             className="px-8 py-4 border border-[var(--color-accent)] text-[var(--color-accent)] rounded-[var(--radius-sm)] mono mt-4"
                         >
