@@ -29,4 +29,5 @@ coverage/
 .tmp/
 .cache/
 
-./docs/
+#AI Docs
+docs/
