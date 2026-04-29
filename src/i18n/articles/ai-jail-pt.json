@@ -1,0 +1,27 @@
+{
+  "slug": "ai-jail",
+  "title": "AI-Jail: Construindo um Ambiente Seguro para Desenvolvimento com IA",
+  "description": "Como construí um ambiente controlado para desenvolvimento assistido por IA com Docker, WSL e SSH.",
+  "category": "projects",
+  "publishedAt": "2026-04-29",
+  "coverImage": "/images/blog/ai-jail/cover.png",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "O AI-Jail foi criado para manter o desenvolvimento assistido por IA poderoso sem perder o controle do ambiente de trabalho."
+    },
+    {
+      "type": "paragraph",
+      "text": "A primeira versão foca em um modelo simples e eficaz: um container remoto, acesso restrito e ferramentas previsíveis."
+    },
+    {
+      "type": "image",
+      "src": "/images/blog/ai-jail/example.png",
+      "alt": "Exemplo da configuração do ambiente"
+    },
+    {
+      "type": "video",
+      "src": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    }
+  ]
+}

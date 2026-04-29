@@ -1,283 +1,66 @@
 {
-    "nav": {
-        "home": "Início",
-        "about": "Sobre",
-        "skills": "Habilidades",
-        "projects": "Projetos",
-        "experience": "Experiência",
-        "contact": "Contato",
-        "resume": "Currículo",
-        "backToHome": "Voltar para Início"
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "experience": "Experiência",
+    "contact": "Contato",
+    "resume": "Currículo",
+    "backToHome": "Voltar para Início"
+  },
+  "blog": {
+    "page": {
+      "title": "Blog",
+      "description": "Artigos sobre desenvolvimento, IA, projetos e carreira.",
+      "allCategories": "Todas as categorias",
+      "readMore": "Ler mais",
+      "backToBlog": "Voltar para o blog",
+      "categories": "Categorias"
     },
-    "hero": {
-        "greeting": "Olá, meu nome é",
-        "name": "Pedro Nogueira.",
-        "role": "Senior Backend Developer & Especialista em IA",
-        "description": "Desenvolvedor Backend Sênior e Especialista em Engenharia de Agentes de IA com mais de 8 anos de experiência. Sólida expertise no ecossistema PHP (Symfony, Laravel, Zend) e Python (FastAPI).",
-        "viewProjects": "Ver Projetos",
-        "cta": "Entre em Contato"
+    "home": {
+      "title": "Últimos artigos",
+      "viewAll": "Ver todos os artigos",
+      "readMore": "Ler artigo"
     },
-    "about": {
-        "title": "Sobre Mim",
-        "description": "Desenvolvedor Backend Sênior e Especialista em Engenharia de Agentes de IA com mais de 8 anos de experiência. Atualmente liderando iniciativas 'AI First', integrando LLMs e arquiteturas RAG.",
-        "education": "Educação",
-        "educationItems": [
-            {
-                "degree": "Bacharel em Ciência da Computação",
-                "university": "Unisagrado (2016 – 2019)"
-            },
-            {
-                "degree": "Pós-graduação em Data Analytics",
-                "university": "Descomplica (Em andamento)"
-            }
-        ],
-        "certifications": [
-            {
-                "name": "Engenharia de Agentes de IA",
-                "provider": "Asimov Academy",
-                "link": "https://hub.asimov.academy/validar-certificado/e33981d2-ad1b-4d4c-b27f-0d1b1c3f6d63/"
-            },
-            {
-                "name": "Agile Management with Scrum",
-                "provider": "Professional Cert",
-                "link": "https://www.udemy.com/certificate/UC-d45bc474-6e3d-4ae3-ae66-0233bf4352a7/"
-            }
-        ],
-        "languages": "Idiomas",
-        "languageItems": [
-            {
-                "name": "Português",
-                "level": "Nativo",
-                "progress": 100
-            },
-            {
-                "name": "Inglês",
-                "level": "Avançado",
-                "progress": 90
-            },
-            {
-                "name": "Espanhol",
-                "level": "Intermediário",
-                "progress": 60
-            }
+    "categories": {
+      "development": "Desenvolvimento",
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "devops": "DevOps",
+      "ai": "IA",
+      "career": "Carreira",
+      "projects": "Projetos",
+      "tutorials": "Tutoriais"
+    },
+    "items": {
+      "ai-jail": {
+        "slug": "ai-jail",
+        "title": "AI-Jail: Construindo um Ambiente Seguro para Desenvolvimento com IA",
+        "description": "Como construí um ambiente controlado para desenvolvimento assistido por IA com Docker, WSL e SSH.",
+        "category": "projects",
+        "publishedAt": "2026-04-29",
+        "coverImage": "/images/blog/ai-jail/cover.png",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "O AI-Jail foi criado para manter o desenvolvimento assistido por IA poderoso sem perder o controle do ambiente de trabalho."
+          },
+          {
+            "type": "paragraph",
+            "text": "A primeira versão foca em um modelo simples e eficaz: um container remoto, acesso restrito e ferramentas previsíveis."
+          },
+          {
+            "type": "image",
+            "src": "/images/blog/ai-jail/example.png",
+            "alt": "Exemplo da configuração do ambiente"
+          },
+          {
+            "type": "video",
+            "src": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+          }
         ]
-    },
-    "skills": {
-        "title": "Habilidades Técnicas",
-        "groups": {
-            "backend": {
-                "title": "Backend & Linguagens",
-                "items": [
-                    "PHP (Symfony, Laravel)",
-                    "Python (FastAPI)",
-                    "Node.js (TypeScript)",
-                    "Bash/Shell Script"
-                ]
-            },
-            "ai": {
-                "title": "Inteligência Artificial",
-                "items": [
-                    "Agentes de IA",
-                    "Arq. RAG",
-                    "Eng. Prompt",
-                    "Integração LLM",
-                    "Claude Code",
-                    "Gemini CLI",
-                    "OpenAI API",
-                    "LangChain",
-                    "Hugging Face",
-                    "Pandas",
-                    "NumPy",
-                    "Matplotlib"
-                ]
-            },
-            "devops": {
-                "title": "Infraestrutura & Cloud",
-                "items": [
-                    "Docker",
-                    "VPS",
-                    "GitHub Actions",
-                    "Nginx",
-                    "Linux (WSL/SSH)",
-                    "AWS",
-                    "Ansible"
-                ]
-            },
-            "testing": {
-                "title": "Agilidade & Qualidade",
-                "items": [
-                    "Scrum",
-                    "TDD / Testes Unit.",
-                    "Gestão de KPIs",
-                    "Liderança Técnica",
-                    "Domain-Driven Design",
-                    "Arquitetura de Sistemas",
-                    "Design de Sistemas",
-                    "Engenheiro de Suporte Técnico"
-                ]
-            },
-            "ide": {
-                "title": "IDEs com IA",
-                "items": [
-                    "VS Code Copilot (Backend)",
-                    "Cursor AI (Backend)",
-                    "Google Antigravity (Frontend)"
-                ]
-            },
-            "data": {
-                "title": "Dados",
-                "items": [
-                    "PostgreSQL",
-                    "MySQL",
-                    "MongoDB",
-                    "Redis",
-                    "SQLite",
-                    "Elasticsearch",
-                    "Supabase",
-                    "Firebase",
-                    "AWS S3",
-                    "AWS RDS",
-                    "AWS DynamoDB",
-                    "AWS ElastiCache",
-                    "Banco de Dados Vetorial: ChromaDB"
-                ]
-            }
-        },
-        "core": {
-            "title": "Competências Principais",
-            "items": [
-                "APIs RESTful",
-                "Automação de Fluxos",
-                "Clean Architecture",
-                "Engenharia de Agentes de IA",
-                "Metodologias Ágeis",
-                "Engenheiro de Suporte Técnico"
-            ]
-        }
-    },
-    "projects": {
-        "title": "Projetos em Destaque",
-        "subtitle": "Confira alguns dos meus trabalhos recentes",
-        "items": {
-            "aiJail": {
-                "name": "AI-Jail",
-                "shortDescription": "Sandbox Docker segura para agentes de desenvolvimento de IA.",
-                "description": "Ambiente de desenvolvimento em Docker pensado para rodar o Openclaude (Ou qualquer IA de CLI), o basic-memory (conhecimento local / MCP) e o GitHub CLI (gh) para automatizar a criação de repositórios a partir de workspace/new-project.sh. Criando projetos com estrutura pronta para codar utilizando IA.",
-                "tech": [
-                    "Docker",
-                    "WSL",
-                    "SSH",
-                    "Linux",
-                    "AI Agents",
-                    "GitHub CLI"
-                ],
-                "keyFeatures": [
-                    "Configuração automatizada de ambiente de desenvolvimento orientado a IA",
-                    "Sandboxing de CLI de IA (\"AI Jail\") para restringir acesso a arquivos locais e dados sensíveis",
-                    "Fluxo de trabalho de desenvolvimento padronizado e governado",
-                    "Ambiente conteinerizado remoto rodando em uma máquina externa, acessado via SSH com segurança"
-                ],
-                "sourceCode": "https://github.com/PedroNogueira97/ai-jail"
-            },
-            "aiResume": {
-                "name": "AI Resume Agent",
-                "shortDescription": "Aplicação baseada em agentes de IA para geração dinâmica de currículos.",
-                "description": "Aplicação baseada em agentes de IA para geração dinâmica de currículos usando Python, FastAPI e RAG.",
-                "tech": [
-                    "Python",
-                    "FastAPI",
-                    "RAG",
-                    "LLMs",
-                    "ChromaDB"
-                ],
-                "keyFeatures": [
-                    "Aplicação baseada em agentes de IA para geração dinâmica de currículos",
-                    "Geração de currículos dinâmicos usando Python, FastAPI e RAG"
-                ],
-                "sourceCode": "https://github.com/PedroNogueira97/cv_agent"
-            },
-            "lnmWebsite": {
-                "name": "Website LNM",
-                "shortDescription": "Website para a LNM Engenharia com implementação completa de pipeline de CI/CD.",
-                "description": "Implementação completa de pipeline CI/CD com deploy automatizado para VPS via Nginx e GitHub Actions.",
-                "tech": [
-                    "Nginx",
-                    "GitHub Actions",
-                    "CI/CD",
-                    "VPS",
-                    "Docker"
-                ],
-                "keyFeatures": [
-                    "Website para a LNM Engenharia",
-                    "Implementação completa de pipeline CI/CD com deploy automatizado para VPS via Nginx e GitHub Actions"
-                ],
-                "sourceCode": "https://lnmengenharia.com"
-            }
-        }
-    },
-    "experience": {
-        "title": "Experiência Profissional",
-        "subtitle": "Minha trajetória profissional",
-        "items": [
-            {
-                "role": "Gerente de Operações",
-                "company": "LNM Engenharia",
-                "period": "Nov 2025 – Presente",
-                "description": [
-                    "Liderança de equipes multidisciplinares (TI, Operações, Comercial) aplicando metodologias ágeis (Scrum).",
-                    "Estruturação de processos técnicos baseados em KPIs e automação de fluxos operacionais."
-                ]
-            },
-            {
-                "role": "Desenvolvedor Backend",
-                "company": "Arca Solutions",
-                "period": "Nov 2020 – Ago 2025",
-                "description": [
-                    "Desenvolvimento e manutenção de APIs RESTful complexas usando PHP Symfony e Laravel para clientes internacionais.",
-                    "Resolução de mais de 500 incidentes críticos em produção com 99,5% de sucesso.",
-                    "Otimização de performance em MySQL e Elasticsearch, alcançando até 40% de ganho de velocidade."
-                ]
-            },
-            {
-                "role": "Desenvolvedor Fullstack",
-                "company": "Experience Soluções",
-                "period": "Mai 2020 – Jul 2020",
-                "description": [
-                    "Desenvolvimento de aplicações web com Node.js, React e TypeScript.",
-                    "Integração de APIs de telecomunicações e sistemas de processamento em tempo real."
-                ]
-            },
-            {
-                "role": "Desenvolvedor Fullstack Júnior",
-                "company": "2RS Soluções Web/TI",
-                "period": "Dez 2018 – Mai 2020",
-                "description": [
-                    "Desenvolvimento de e-commerces robustos utilizando PHP e Zend Framework.",
-                    "Integração de gateways de pagamento (PayPal, Yelp) e manutenção de sistemas em produção."
-                ]
-            }
-        ]
-    },
-    "contact": {
-        "title": "Entre em Contato",
-        "subtitle": "Atualmente aberto a novas oportunidades.",
-        "description": "Se você tem um projeto em mente ou apenas quer dizer oi, minha caixa de entrada está sempre aberta. Responderei o mais rápido possível!",
-        "form": {
-            "name": "Nome",
-            "email": "E-mail",
-            "message": "Mensagem",
-            "submit": "Enviar Mensagem",
-            "sending": "Enviando...",
-            "success": "Mensagem enviada com sucesso!"
-        }
-    },
-    "resume": {
-        "title": "Procurando meu CV?",
-        "subtitle": "Você pode baixar a versão em PDF do meu currículo ou visualizá-la diretamente no navegador. Inclui todo o meu histórico e stack técnica.",
-        "button": "Baixar Currículo"
-    },
-    "footer": {
-        "builtWith": "Desenvolvido com",
-        "using": "usando React & Tailwind"
+      }
     }
+  }
 }
