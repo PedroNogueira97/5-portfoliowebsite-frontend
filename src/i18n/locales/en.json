@@ -9,6 +9,125 @@
     "resume": "Resume",
     "backToHome": "Back to Home"
   },
+  "hero": {
+    "title": "Backend Developer & AI Agent Engineer",
+    "subtitle": "Building scalable systems and AI-first workflows",
+    "description": "Senior Backend Developer with 8+ years of experience across PHP, Python, and modern web platforms."
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Backend specialist focused on scalable systems, automation, and AI-driven engineering.",
+    "educationTitle": "Education",
+    "educationItems": [
+      {
+        "title": "Bachelor of Computer Science",
+        "institution": "Unisagrado",
+        "period": "2016 - 2019"
+      },
+      {
+        "title": "Postgraduate in Data Analysis",
+        "institution": "Descomplica",
+        "period": "In progress"
+      }
+    ],
+    "languagesTitle": "Languages",
+    "languages": [
+      "English - Advanced",
+      "Spanish - Intermediate",
+      "Portuguese - Native"
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "groups": {
+      "backend": {
+        "title": "Backend & Languages",
+        "items": ["PHP", "Python", "JavaScript/TypeScript", "Bash", "FastAPI", "Laravel", "Symfony", "Zend"]
+      },
+      "ai": {
+        "title": "AI First",
+        "items": ["LLMs", "RAG", "Prompt Engineering", "Agents", "MCP", "Claude Code", "Cursor"]
+      },
+      "devops": {
+        "title": "Infrastructure & DevOps",
+        "items": ["Docker", "Docker Compose", "GitHub Actions", "Nginx", "AWS", "Linux", "MySQL", "Redis"]
+      }
+    },
+    "mainSkills": ["Clean Architecture", "DDD", "REST APIs", "Microservices", "Performance Tuning"]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": {
+      "ai-jail": {
+        "title": "AI-Jail",
+        "description": "Safe remote environment for AI-assisted development.",
+        "technologies": ["Docker", "WSL", "SSH"],
+        "slug": "ai-jail"
+      },
+      "ai-resume-agent": {
+        "title": "AI Resume Agent",
+        "description": "Agent-based app for dynamic resume generation.",
+        "technologies": ["Python", "FastAPI", "RAG"],
+        "slug": "ai-resume-agent"
+      },
+      "lnm-website": {
+        "title": "LNM Website",
+        "description": "CI/CD pipeline with automated VPS deployment.",
+        "technologies": ["GitHub Actions", "Nginx", "VPS"],
+        "slug": "lnm-website"
+      }
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "items": [
+      {
+        "slug": "lnm-engenharia",
+        "role": "Operations Manager",
+        "company": "LNM Engenharia",
+        "period": "Nov/2025 - Present",
+        "description": "Leading multidisciplinary teams and structuring technical processes.",
+        "technologies": ["Scrum", "KPIs", "Automation"]
+      },
+      {
+        "slug": "arca-solutions",
+        "role": "Backend Developer",
+        "company": "Arca Solutions",
+        "period": "Nov/2020 - Aug/2025",
+        "description": "Built and maintained complex REST APIs for international clients.",
+        "technologies": ["PHP", "Symfony", "Laravel", "MySQL", "Elasticsearch"]
+      },
+      {
+        "slug": "experience-solucoes",
+        "role": "Fullstack Developer",
+        "company": "Experience Soluções",
+        "period": "May/2020 - Jul/2020",
+        "description": "Developed web applications with Node.js, React, and TypeScript.",
+        "technologies": ["Node.js", "React", "TypeScript"]
+      },
+      {
+        "slug": "2rs-solucoes",
+        "role": "Junior Fullstack Developer",
+        "company": "2RS Soluções Web/TI",
+        "period": "Dec/2018 - May/2020",
+        "description": "Built robust e-commerce applications with PHP and Zend Framework.",
+        "technologies": ["PHP", "Zend Framework", "Payment Integration"]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message"
+  },
+  "resume": {
+    "title": "Resume",
+    "download": "Download Resume"
+  },
+  "footer": {
+    "copyright": "© 2026 Pedro Nogueira de Moraes Neto"
+  },
   "blog": {
     "page": {
       "title": "Blog",

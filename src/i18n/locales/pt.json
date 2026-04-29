@@ -9,6 +9,125 @@
     "resume": "Currículo",
     "backToHome": "Voltar para Início"
   },
+  "hero": {
+    "title": "Desenvolvedor Backend & Engenheiro de Agentes de IA",
+    "subtitle": "Construindo sistemas escaláveis e fluxos AI-first",
+    "description": "Desenvolvedor Backend Sênior com mais de 8 anos de experiência em PHP, Python e plataformas web modernas."
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Especialista em backend focado em sistemas escaláveis, automação e engenharia orientada por IA.",
+    "educationTitle": "Formação",
+    "educationItems": [
+      {
+        "title": "Bacharel em Ciência da Computação",
+        "institution": "Unisagrado",
+        "period": "2016 - 2019"
+      },
+      {
+        "title": "Pós-graduação em Análise de Dados",
+        "institution": "Descomplica",
+        "period": "Em andamento"
+      }
+    ],
+    "languagesTitle": "Idiomas",
+    "languages": [
+      "Inglês - Avançado",
+      "Espanhol - Intermediário",
+      "Português - Nativo"
+    ]
+  },
+  "skills": {
+    "title": "Habilidades",
+    "groups": {
+      "backend": {
+        "title": "Backend & Linguagens",
+        "items": ["PHP", "Python", "JavaScript/TypeScript", "Bash", "FastAPI", "Laravel", "Symfony", "Zend"]
+      },
+      "ai": {
+        "title": "AI First",
+        "items": ["LLMs", "RAG", "Prompt Engineering", "Agents", "MCP", "Claude Code", "Cursor"]
+      },
+      "devops": {
+        "title": "Infraestrutura & DevOps",
+        "items": ["Docker", "Docker Compose", "GitHub Actions", "Nginx", "AWS", "Linux", "MySQL", "Redis"]
+      }
+    },
+    "mainSkills": ["Clean Architecture", "DDD", "APIs REST", "Microsserviços", "Otimização de Performance"]
+  },
+  "projects": {
+    "title": "Projetos",
+    "items": {
+      "ai-jail": {
+        "title": "AI-Jail",
+        "description": "Ambiente remoto seguro para desenvolvimento assistido por IA.",
+        "technologies": ["Docker", "WSL", "SSH"],
+        "slug": "ai-jail"
+      },
+      "ai-resume-agent": {
+        "title": "AI Resume Agent",
+        "description": "Aplicação baseada em agentes para geração dinâmica de currículos.",
+        "technologies": ["Python", "FastAPI", "RAG"],
+        "slug": "ai-resume-agent"
+      },
+      "lnm-website": {
+        "title": "LNM Website",
+        "description": "Pipeline de CI/CD com deploy automatizado em VPS.",
+        "technologies": ["GitHub Actions", "Nginx", "VPS"],
+        "slug": "lnm-website"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "items": [
+      {
+        "slug": "lnm-engenharia",
+        "role": "Gerente Operacional",
+        "company": "LNM Engenharia",
+        "period": "Nov/2025 - Atual",
+        "description": "Liderança de times multidisciplinares e estruturação de processos técnicos.",
+        "technologies": ["Scrum", "KPIs", "Automação"]
+      },
+      {
+        "slug": "arca-solutions",
+        "role": "Backend Developer",
+        "company": "Arca Solutions",
+        "period": "Nov/2020 - Ago/2025",
+        "description": "Construção e manutenção de APIs REST complexas para clientes internacionais.",
+        "technologies": ["PHP", "Symfony", "Laravel", "MySQL", "Elasticsearch"]
+      },
+      {
+        "slug": "experience-solucoes",
+        "role": "Desenvolvedor Fullstack",
+        "company": "Experience Soluções",
+        "period": "Mai/2020 - Jul/2020",
+        "description": "Desenvolvimento de aplicações web com Node.js, React e TypeScript.",
+        "technologies": ["Node.js", "React", "TypeScript"]
+      },
+      {
+        "slug": "2rs-solucoes",
+        "role": "Desenvolvedor Fullstack Júnior",
+        "company": "2RS Soluções Web/TI",
+        "period": "Dez/2018 - Mai/2020",
+        "description": "Construção de e-commerces robustos com PHP e Zend Framework.",
+        "technologies": ["PHP", "Zend Framework", "Integração de Pagamentos"]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contato",
+    "name": "Nome",
+    "email": "E-mail",
+    "message": "Mensagem"
+  },
+  "resume": {
+    "title": "Currículo",
+    "download": "Baixar Currículo"
+  },
+  "footer": {
+    "copyright": "© 2026 Pedro Nogueira de Moraes Neto"
+  },
   "blog": {
     "page": {
       "title": "Blog",
